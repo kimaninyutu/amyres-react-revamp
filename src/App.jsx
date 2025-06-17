@@ -13,7 +13,6 @@ import Services from './pages/Services';
 import Products from './pages/Products';
 import News from './pages/News';
 import Contact from './pages/Contact';
-import Login from './pages/Login';
 
 const queryClient = new QueryClient();
 
@@ -32,7 +31,6 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/news" element={<News />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
             </Routes>
           </Layout>
         </Router>
