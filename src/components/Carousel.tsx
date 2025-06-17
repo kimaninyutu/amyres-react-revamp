@@ -2,8 +2,19 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Carousel = ({ images, autoPlay = true, interval = 5000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+interface CarouselImage {
+  src: string;
+  alt: string;
+}
+
+interface CarouselProps {
+  images: CarouselImage[];
+  autoPlay?: boolean;
+  interval?: number;
+}
+
+const Carousel: React.FC<CarouselProps> = ({ images, autoPlay = true, interval = 5000 }) => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   useEffect(() => {
     if (autoPlay && images.length > 1) {
@@ -17,11 +28,11 @@ const Carousel = ({ images, autoPlay = true, interval = 5000 }) => {
     }
   }, [currentIndex, autoPlay, interval, images.length]);
 
-  const goToPrevious = () => {
+  const goToPrevious = (): void => {
     setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
   };
 
-  const goToNext = () => {
+  const goToNext = (): void => {
     setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
   };
 
