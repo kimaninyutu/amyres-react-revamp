@@ -1,199 +1,189 @@
 
 import React from 'react';
+import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Leaf, BarChart3, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
+  const features = [
+    {
+      icon: BarChart3,
+      title: "Data Analytics",
+      description: "Advanced agricultural data analysis and insights for informed decision-making.",
+      color: "text-blue-600"
+    },
+    {
+      icon: Leaf,
+      title: "Sustainable Practices",
+      description: "Promoting eco-friendly farming methods for long-term agricultural success.",
+      color: "text-emerald-600"
+    },
+    {
+      icon: Globe,
+      title: "Research Innovation",
+      description: "Cutting-edge research and development in agricultural technology.",
+      color: "text-purple-600"
+    }
+  ];
+
+  const stats = [
+    { number: "50+", label: "Projects Completed", icon: Award },
+    { number: "100+", label: "Happy Clients", icon: Users },
+    { number: "95%", label: "Success Rate", icon: TrendingUp },
+    { number: "5+", label: "Years Experience", icon: CheckCircle }
+  ];
+
+  const services = [
+    "Software Development",
+    "Agricultural Data Management", 
+    "Field Trials & Research",
+    "Market Research & Analysis",
+    "Consultancy Services",
+    "Literature Reviews"
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#004aad] via-[#0097b2] to-[#7ed957] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl floating"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#7ed957]/20 rounded-full blur-3xl floating" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-[#0097b2]/10 rounded-full blur-3xl floating" style={{animationDelay: '4s'}}></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl floating"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl floating-delayed"></div>
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl floating" style={{animationDelay: '4s'}}></div>
       </div>
 
-      <div className="container mx-auto px-6 py-16 relative z-10">
-        {/* Hero Section */}
-        <section className="text-center mb-24 animate-fadeInUp">
-          <div className="glass rounded-3xl p-16 max-w-6xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-bold font-poppins mb-8 leading-tight">
-              <span className="gradient-text">AMYRES</span>
-              <br />
-              <span className="text-white text-4xl md:text-5xl font-light">AgTech</span>
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 mb-8 font-light max-w-4xl mx-auto leading-relaxed">
-              Powering insightful innovations for sustainable agriculture
-            </p>
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-              Bridging the gap between agricultural research and practical farming solutions through cutting-edge technology and data-driven insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="btn-modern btn-primary text-xl">
-                <span className="relative z-10">Explore Our Services</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full transition-transform duration-700 hover:translate-x-full"></div>
-              </button>
-              <button className="btn-modern btn-secondary text-xl">
-                <span className="relative z-10">View Products</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full transition-transform duration-700 hover:translate-x-full"></div>
-              </button>
-            </div>
+      {/* Hero Section */}
+      <section className="section-container relative z-10 pt-20 lg:pt-32 pb-16 lg:pb-24">
+        <div className="text-center animate-fadeInUp">
+          <h1 className="heading-xl mb-8">
+            Transforming Agriculture Through{' '}
+            <span className="gradient-text">Innovation</span>
+          </h1>
+          <p className="text-body text-xl mb-12 max-w-4xl mx-auto">
+            We're your trusted partner in agricultural research, innovation, and development. 
+            Empowering farmers and agribusinesses with cutting-edge technology and data-driven solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/services" className="btn-modern btn-primary group">
+              <span className="flex items-center gap-2">
+                Explore Our Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </Link>
+            <Link to="/contact" className="btn-modern btn-outline">
+              Get in Touch
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Mission & Vision */}
-        <section className="mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="card-modern animate-fadeInUp delay-200">
-              <div className="text-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-[#004aad] to-[#0097b2] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-glow">
-                  <span className="text-white text-3xl">🎯</span>
+      {/* Stats Section */}
+      <section className="section-container pb-16 lg:pb-24">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`text-center animate-fadeInUp delay-${(index + 1) * 100}`}
+            >
+              <div className="glass rounded-3xl p-8 group hover:-translate-y-2 transition-all duration-500">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center text-blue-600">
+                  <stat.icon className="w-8 h-8" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#004aad] font-poppins">Our Mission</h2>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                To enhance agricultural productivity and sustainability by making research-based knowledge and technologies accessible to every farmer, agribusiness, and stakeholder in Kenya.
-              </p>
-            </div>
-
-            <div className="card-modern animate-fadeInUp delay-300">
-              <div className="text-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-[#0097b2] to-[#7ed957] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-glow">
-                  <span className="text-white text-3xl">🔮</span>
-                </div>
-                <h2 className="text-3xl font-bold text-[#004aad] font-poppins">Our Vision</h2>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                To become the leading catalyst for sustainable agricultural innovation in Kenya, empowering farmers through research-driven solutions that enhance food security.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Preview */}
-        <section className="mb-24 animate-fadeInUp delay-400">
-          <div className="glass rounded-3xl p-12">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold font-poppins mb-6">
-                <span className="gradient-text">Our Services</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive agricultural research and technology solutions tailored to your needs
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: "🧪",
-                  title: "Field Trials",
-                  description: "Comprehensive experimental trials across Kenya's agroecological zones",
-                  color: "from-[#004aad] to-[#0097b2]"
-                },
-                {
-                  icon: "📊",
-                  title: "Data Analytics",
-                  description: "Transform agricultural data into actionable insights with advanced analytics",
-                  color: "from-[#0097b2] to-[#7ed957]"
-                },
-                {
-                  icon: "🔬",
-                  title: "Research Services",
-                  description: "Literature reviews and market research for informed decision making",
-                  color: "from-[#7ed957] to-[#5cb85c]"
-                },
-                {
-                  icon: "📱",
-                  title: "App Development",
-                  description: "Custom agricultural applications with user-centric design and testing",
-                  color: "from-[#5cb85c] to-[#004aad]"
-                },
-                {
-                  icon: "💡",
-                  title: "Consultancy",
-                  description: "Expert guidance for agricultural innovation and development strategies",
-                  color: "from-[#004aad] to-[#7ed957]"
-                },
-                {
-                  icon: "🎓",
-                  title: "Training",
-                  description: "Capacity building and skills development programs for agricultural stakeholders",
-                  color: "from-[#7ed957] to-[#0097b2]"
-                }
-              ].map((service, index) => (
-                <div key={index} className="glass rounded-2xl p-8 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 group">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 text-2xl transform group-hover:scale-110 transition-transform duration-300 shadow-glow`}>
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-[#004aad] mb-4 font-poppins">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Product - AGReFIND */}
-        <section className="mb-24 animate-fadeInUp delay-500">
-          <div className="glass rounded-3xl p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="mb-8">
-                  <div className="w-24 h-24 bg-gradient-to-r from-[#004aad] to-[#7ed957] rounded-3xl flex items-center justify-center mb-6 shadow-glow floating">
-                    <span className="text-white text-4xl">📱</span>
-                  </div>
-                  <h2 className="text-4xl font-bold font-poppins mb-4">
-                    <span className="gradient-text">AGReFIND</span>
-                  </h2>
-                  <p className="text-xl text-gray-600 mb-6">
-                    Bridging the Gap Between Agricultural Research and Farmers
-                  </p>
-                </div>
-                
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  An AI-powered mobile application that connects stakeholders to localized agricultural research, ensuring access to actionable, up-to-date information.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="btn-modern btn-primary">
-                    <span className="relative z-10">Learn More</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full transition-transform duration-700 hover:translate-x-full"></div>
-                  </button>
-                  <button className="btn-modern bg-white/20 backdrop-blur-sm text-[#004aad] border border-white/30 hover:bg-white/30">
-                    Download App
-                  </button>
-                </div>
-              </div>
-
-              <div className="glass-dark rounded-2xl p-8">
-                <div className="aspect-video bg-gradient-to-br from-[#004aad]/20 to-[#7ed957]/20 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-r from-[#004aad] to-[#7ed957] rounded-3xl flex items-center justify-center mx-auto mb-6 floating">
-                      <span className="text-white text-6xl">📱</span>
-                    </div>
-                    <p className="text-white text-xl font-semibold">AGReFIND App Preview</p>
-                    <p className="text-white/70 mt-2">Coming Soon</p>
-                  </div>
-                </div>
+                <h3 className="text-3xl font-bold text-slate-800 mb-2 font-poppins">{stat.number}</h3>
+                <p className="text-slate-600 font-medium">{stat.label}</p>
               </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        {/* Call to Action */}
-        <section className="text-center animate-fadeInUp delay-600">
-          <div className="glass rounded-3xl p-16">
-            <h2 className="text-4xl font-bold font-poppins mb-6">
-              <span className="gradient-text">Ready to Transform Your Agriculture?</span>
+      {/* Features Section */}
+      <section className="section-container pb-16 lg:pb-24">
+        <div className="text-center mb-16 animate-fadeInUp">
+          <h2 className="heading-lg mb-6">
+            <span className="gradient-text">Why Choose AMYRES AgTech?</span>
+          </h2>
+          <p className="text-body max-w-3xl mx-auto">
+            We combine cutting-edge technology with deep agricultural expertise to deliver solutions that drive real results.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`group animate-fadeInUp delay-${(index + 2) * 100}`}
+            >
+              <div className="glass rounded-3xl p-8 h-full hover:-translate-y-2 transition-all duration-500">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-100 to-white shadow-modern flex items-center justify-center mb-6 ${feature.color} group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8" />
+                </div>
+                <h3 className="heading-md text-slate-800 mb-4">{feature.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="section-container pb-16 lg:pb-24">
+        <div className="glass-strong rounded-3xl p-12 lg:p-16 animate-fadeInUp delay-500">
+          <div className="text-center mb-12">
+            <h2 className="heading-lg mb-6">
+              <span className="gradient-text">Our Services</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-              Join hundreds of farmers and agribusinesses who trust AMYRES AgTech for innovative agricultural solutions.
+            <p className="text-body max-w-3xl mx-auto">
+              From software development to field trials, we offer comprehensive solutions for modern agriculture.
             </p>
-            <button className="btn-modern btn-primary text-xl">
-              <span className="relative z-10">Get Started Today</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full transition-transform duration-700 hover:translate-x-full"></div>
-            </button>
           </div>
-        </section>
-      </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`flex items-center gap-3 p-4 rounded-2xl bg-white/50 hover:bg-white/80 transition-all duration-300 animate-slideInRight delay-${(index + 1) * 100}`}
+              >
+                <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0" />
+                <span className="text-slate-700 font-medium">{service}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/services" className="btn-modern btn-secondary group">
+              <span className="flex items-center gap-2">
+                View All Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-container pb-20">
+        <div className="text-center animate-fadeInUp delay-600">
+          <div className="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
+            <h2 className="heading-lg mb-6">
+              Ready to Transform Your{' '}
+              <span className="gradient-text">Agricultural Business?</span>
+            </h2>
+            <p className="text-body mb-8 max-w-2xl mx-auto">
+              Join the growing number of farmers and agribusinesses who trust AMYRES AgTech for their research and development needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="btn-modern btn-primary group">
+                <span className="flex items-center gap-2">
+                  Start Your Project
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </Link>
+              <Link to="/about" className="btn-modern btn-outline">
+                Learn More About Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
