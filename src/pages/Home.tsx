@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Leaf, BarChart3, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -51,7 +50,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Hero Section - White/Light Background */}
-      <section className="section-container relative z-10 pt-20 lg:pt-32 pb-16 lg:pb-24">
+      <section className="section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
         <div className="text-center animate-fadeInUp">
           <h1 className="heading-xl mb-8">
             Transforming Agriculture Through{' '}
