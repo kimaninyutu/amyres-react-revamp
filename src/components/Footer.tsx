@@ -4,27 +4,37 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative">
-      {/* Curved top edge */}
+    <footer className="relative mt-20">
+      {/* Curved top edge with modern design */}
       <div className="relative">
         <svg 
-          className="w-full h-20 fill-current text-slate-50" 
+          className="w-full h-24 fill-current text-slate-100" 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none"
         >
-          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+          <defs>
+            <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(248, 250, 252, 1)" />
+              <stop offset="50%" stopColor="rgba(241, 245, 249, 0.95)" />
+              <stop offset="100%" stopColor="rgba(226, 232, 240, 0.9)" />
+            </linearGradient>
+          </defs>
+          <path 
+            fill="url(#footerGradient)"
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" 
+          />
         </svg>
       </div>
 
       {/* Main footer content */}
-      <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 relative">
+      <div className="footer-curved">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <div 
             className="w-full h-full" 
             style={{
               backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0)`,
-              backgroundSize: '24px 24px'
+              backgroundSize: '32px 32px'
             }}
           ></div>
         </div>
@@ -38,7 +48,7 @@ const Footer: React.FC = () => {
                   <img 
                     src="/images/amyres-logo.png" 
                     alt="AMYRES AGTECH Logo" 
-                    className="h-14 w-14 object-contain"
+                    className="h-16 w-16 object-contain"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 rounded-full blur-sm"></div>
                 </div>
@@ -56,7 +66,7 @@ const Footer: React.FC = () => {
               </p>
 
               {/* Newsletter Section */}
-              <div className="backdrop-blur-xl bg-white/50 rounded-2xl p-6 border border-white/30">
+              <div className="glass rounded-2xl p-6 border border-white/30">
                 <h4 className="text-lg font-semibold mb-4 font-poppins text-slate-800 flex items-center">
                   <i className="fas fa-envelope mr-3 text-blue-600"></i> 
                   Stay Updated
@@ -187,7 +197,7 @@ const Footer: React.FC = () => {
                 <div className="flex space-x-3">
                   <a 
                     href="https://facebook.com/amyresagtech" 
-                    className="social-link w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-blue-500 hover:to-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
+                    className="w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-blue-500 hover:to-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/30"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -195,7 +205,7 @@ const Footer: React.FC = () => {
                   </a>
                   <a 
                     href="https://twitter.com/amyresagtech" 
-                    className="social-link w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-blue-400 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
+                    className="w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-blue-400 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/30"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -203,7 +213,7 @@ const Footer: React.FC = () => {
                   </a>
                   <a 
                     href="https://www.linkedin.com/company/amyresagtech/" 
-                    className="social-link w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-blue-600 hover:to-blue-700 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
+                    className="w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-blue-600 hover:to-blue-700 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/30"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -211,7 +221,7 @@ const Footer: React.FC = () => {
                   </a>
                   <a 
                     href="https://instagram.com/amyresagtech" 
-                    className="social-link w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
+                    className="w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/30"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -219,7 +229,7 @@ const Footer: React.FC = () => {
                   </a>
                   <a 
                     href="https://youtube.com/@amyresagtech" 
-                    className="social-link w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
+                    className="w-12 h-12 bg-gradient-to-br from-white/80 to-white/60 rounded-2xl flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/30"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -231,7 +241,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Footer Bottom */}
-          <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="border-t border-slate-200/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center backdrop-blur-sm">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-slate-600 font-inter">
                 &copy; 2025 AMYRES AGTECH. All Rights Reserved.

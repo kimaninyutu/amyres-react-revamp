@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Leaf, BarChart3, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -41,7 +42,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl floating"></div>
@@ -49,8 +50,8 @@ const Home: React.FC = () => {
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl floating" style={{animationDelay: '4s'}}></div>
       </div>
 
-      {/* Hero Section - White/Light Background */}
-      <section className="section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
+      {/* Hero Section - Gradient Background */}
+      <section className="bg-hero-gradient section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
         <div className="text-center animate-fadeInUp">
           <h1 className="heading-xl mb-8">
             Transforming Agriculture Through{' '}
@@ -74,8 +75,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section - Subtle Green Gradient Background */}
-      <section className="bg-secondary-light section-padding">
+      {/* Stats Section - AgTech Gradient Background */}
+      <section className="bg-agtech-gradient section-padding">
         <div className="section-container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -96,8 +97,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section - Light Blue Gradient Background */}
-      <section className="bg-accent-light section-padding">
+      {/* Features Section - Premium Blue Background */}
+      <section className="bg-premium-blue section-padding">
         <div className="section-container">
           <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="heading-lg mb-6">
@@ -127,8 +128,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section - AgTech Gradient Background */}
-      <section className="bg-agtech-gradient section-padding">
+      {/* Services Section - Earth Tone Background */}
+      <section className="bg-earth-tone section-padding">
         <div className="section-container">
           <div className="glass-strong rounded-3xl p-12 lg:p-16 animate-fadeInUp delay-500">
             <div className="text-center mb-12">
@@ -164,8 +165,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section - Neutral Pattern Background */}
-      <section className="bg-neutral-pattern section-padding">
+      {/* CTA Section - Glass Section Background */}
+      <section className="bg-glass-section section-padding">
         <div className="section-container">
           <div className="text-center animate-fadeInUp delay-600">
             <div className="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
