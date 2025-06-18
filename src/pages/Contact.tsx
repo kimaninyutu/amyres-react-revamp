@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+    <div className="min-h-screen">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl floating"></div>
@@ -79,10 +79,10 @@ const Contact: React.FC = () => {
         <div className="absolute top-1/2 left-1/4 w-60 h-60 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl floating" style={{animationDelay: '4s'}}></div>
       </div>
 
-      <div className="section-container section-padding relative z-10">
-        {/* Hero Section */}
-        <section className="text-center mb-20 animate-fadeInUp">
-          <div className="max-w-4xl mx-auto">
+      {/* Hero Section - Primary Light Background */}
+      <section className="bg-primary-light pt-20 pb-16 relative z-10">
+        <div className="section-container">
+          <div className="text-center animate-fadeInUp">
             <h1 className="heading-xl mb-6">
               <span className="gradient-text">Get in Touch</span>
             </h1>
@@ -96,10 +96,12 @@ const Contact: React.FC = () => {
               </span>
             </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact Methods */}
-        <section className="mb-20">
+      {/* Contact Methods - White Background */}
+      <section className="bg-white section-padding relative z-10">
+        <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactMethods.map((contact, index) => (
               <a
@@ -107,7 +109,7 @@ const Contact: React.FC = () => {
                 href={contact.href}
                 target={contact.href.startsWith('http') ? '_blank' : undefined}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className={`contact-method animate-fadeInUp delay-${(index + 1) * 100}`}
+                className={`contact-method animate-fadeInUp delay-${(index + 1) * 100} group`}
               >
                 <div className="text-center">
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 ${contact.color} bg-gradient-to-br from-slate-100 to-white shadow-modern transform group-hover:scale-110 transition-all duration-300`}>
@@ -120,10 +122,12 @@ const Contact: React.FC = () => {
               </a>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Social Media Section */}
-        <section className="mb-20 animate-fadeInUp delay-400">
+      {/* Social Media Section - Secondary Light Background */}
+      <section className="bg-secondary-light section-padding animate-fadeInUp delay-400 relative z-10">
+        <div className="section-container">
           <div className="glass-strong rounded-3xl p-12 max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="heading-lg mb-4">
@@ -159,10 +163,12 @@ const Contact: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Testimonials Section */}
-        <section className="animate-fadeInUp delay-500">
+      {/* Testimonials Section - Accent Light Background */}
+      <section className="bg-accent-light section-padding animate-fadeInUp delay-500 relative z-10">
+        <div className="section-container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="heading-lg mb-4">
@@ -232,8 +238,8 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

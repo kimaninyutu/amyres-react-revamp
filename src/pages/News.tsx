@@ -36,135 +36,148 @@ const News: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#0097b2] to-[#7ed957] min-h-screen">
-      <div className="container mx-auto px-4 py-8">
-        <section className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg mb-8 text-center">
-          <h2 className="text-3xl font-bold text-[#004aad] mb-4 font-poppins">News & Updates</h2>
-          <p className="text-xl text-gray-600 font-inter">
-            "Stay informed with the latest developments from our research team."
-          </p>
-        </section>
+    <div className="min-h-screen">
+      {/* Hero Section - Primary Light Background */}
+      <section className="bg-primary-light pt-20 pb-16">
+        <div className="section-container">
+          <div className="text-center">
+            <h1 className="heading-xl mb-6">
+              <span className="gradient-text">News & Updates</span>
+            </h1>
+            <p className="text-body text-xl max-w-3xl mx-auto">
+              Stay informed with the latest developments from our research team.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        {/* Recent Projects */}
-        <article id="Recent-projects" className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg mb-8">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-[#004aad] mb-2 font-poppins">Recent Projects and Activities</h2>
-            <p className="text-gray-600 flex items-center gap-2 font-inter">
-              <i className="fas fa-calendar text-[#7ed957]"></i>
+      {/* Recent Projects - White Background */}
+      <article id="Recent-projects" className="bg-white section-padding">
+        <div className="section-container">
+          <div className="mb-8">
+            <h2 className="heading-lg mb-4">Recent Projects and Activities</h2>
+            <p className="text-slate-600 flex items-center gap-2">
+              <i className="fas fa-calendar text-emerald-600"></i>
               Published on: April 1, 2025
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="glass rounded-2xl p-4">
               <Carousel 
                 images={newsImages1}
                 autoPlay={true}
                 interval={4000}
               />
             </div>
-            <div>
-              <p className="text-gray-600 mb-4 font-inter">
-                We are proud to announce the successful completion and launch of our website. We look forward to impactful engagements.
-              </p>
-              <p className="text-gray-600 mb-4 font-inter">
-                Check out our products and services and book a service.
-              </p>
+            <div className="space-y-6">
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  We are proud to announce the successful completion and launch of our website. We look forward to impactful engagements.
+                </p>
+                <p>
+                  Check out our products and services and book a service.
+                </p>
+              </div>
               <button 
                 onClick={() => toggleExpanded('news1')}
-                className="bg-gradient-to-r from-[#004aad] to-[#0097b2] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
+                className="btn-modern btn-primary"
               >
                 {expandedNews === 'news1' ? 'Read Less' : 'Read More'}
               </button>
               {expandedNews === 'news1' && (
-                <div className="mt-4 p-4 bg-gradient-to-br from-[#004aad]/10 to-[#0097b2]/10 rounded-lg">
-                  <p className="text-gray-600 font-inter">
+                <div className="glass rounded-2xl p-6 mt-4">
+                  <p className="text-slate-600 leading-relaxed">
                     This milestone represents a breakthrough in agricultural research, enabling better farm decision-making for increased productivity.
                   </p>
                 </div>
               )}
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
-        {/* Featured Service */}
-        <article id="Featured-service" className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg mb-8">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-[#004aad] mb-2 font-poppins">Featured Service: Comprehensive Data Analytics</h2>
-            <p className="text-gray-600 flex items-center gap-2 font-inter">
-              <i className="fas fa-calendar text-[#7ed957]"></i>
+      {/* Featured Service - Secondary Light Background */}
+      <article id="Featured-service" className="bg-secondary-light section-padding">
+        <div className="section-container">
+          <div className="mb-8">
+            <h2 className="heading-lg mb-4">Featured Service: Comprehensive Data Analytics</h2>
+            <p className="text-slate-600 flex items-center gap-2">
+              <i className="fas fa-calendar text-emerald-600"></i>
               Published on: April 1, 2025
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="glass rounded-2xl p-4">
               <Carousel 
                 images={featuredServiceImages}
                 autoPlay={true}
                 interval={3000}
               />
             </div>
-            <div>
-              <p className="text-gray-600 mb-4 font-inter">
+            <div className="space-y-6">
+              <p className="text-slate-600 leading-relaxed">
                 We have expanded our services to include advanced data analytics to help clients make informed decisions.
               </p>
               <button 
                 onClick={() => toggleExpanded('news2')}
-                className="bg-gradient-to-r from-[#7ed957] to-[#5cb85c] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
+                className="btn-modern btn-secondary"
               >
                 {expandedNews === 'news2' ? 'Read Less' : 'Read More'}
               </button>
               {expandedNews === 'news2' && (
-                <div className="mt-4 p-4 bg-gradient-to-br from-[#7ed957]/10 to-[#5cb85c]/10 rounded-lg">
-                  <p className="text-gray-600 font-inter">
+                <div className="glass rounded-2xl p-6 mt-4">
+                  <p className="text-slate-600 leading-relaxed">
                     Our data analytics team is equipped with state-of-the-art tools to provide actionable insights.
                   </p>
                 </div>
               )}
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
-        {/* Industry Insights */}
-        <article id="Industry-insights" className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-[#004aad] mb-2 font-poppins">Industry Insights</h2>
-            <p className="text-gray-600 flex items-center gap-2 font-inter">
-              <i className="fas fa-calendar text-[#7ed957]"></i>
+      {/* Industry Insights - Accent Light Background */}
+      <article id="Industry-insights" className="bg-accent-light section-padding">
+        <div className="section-container">
+          <div className="mb-8">
+            <h2 className="heading-lg mb-4">Industry Insights</h2>
+            <p className="text-slate-600 flex items-center gap-2">
+              <i className="fas fa-calendar text-emerald-600"></i>
               Published on: April 1, 2025
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="glass rounded-2xl p-4">
               <Carousel 
                 images={industryInsightsImages}
                 autoPlay={true}
                 interval={4500}
               />
             </div>
-            <div>
-              <p className="text-gray-600 mb-4 font-inter">
+            <div className="space-y-6">
+              <p className="text-slate-600 leading-relaxed">
                 With advancements in artificial intelligence, agricultural research is experiencing a revolution in predictive analytics and decision-making.
               </p>
               <button 
                 onClick={() => toggleExpanded('news3')}
-                className="bg-gradient-to-r from-[#0097b2] to-[#004aad] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
+                className="btn-modern btn-primary"
               >
                 {expandedNews === 'news3' ? 'Read Less' : 'Read More'}
               </button>
               {expandedNews === 'news3' && (
-                <div className="mt-4 p-4 bg-gradient-to-br from-[#0097b2]/10 to-[#004aad]/10 rounded-lg">
-                  <p className="text-gray-600 font-inter">
+                <div className="glass rounded-2xl p-6 mt-4">
+                  <p className="text-slate-600 leading-relaxed">
                     AI-powered tools are now capable of analyzing extensive datasets for predictive insights, optimizing farming practices.
                   </p>
                 </div>
               )}
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   );
 };

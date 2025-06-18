@@ -95,6 +95,29 @@
     @apply py-16 lg:py-24;
   }
 
+  /* Alternating background variations */
+  .bg-primary-light {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(241, 245, 249, 1) 100%);
+  }
+
+  .bg-secondary-light {
+    background: linear-gradient(135deg, rgba(236, 253, 245, 1) 0%, rgba(220, 252, 231, 1) 100%);
+  }
+
+  .bg-accent-light {
+    background: linear-gradient(135deg, rgba(239, 246, 255, 1) 0%, rgba(219, 234, 254, 1) 100%);
+  }
+
+  .bg-neutral-pattern {
+    background: linear-gradient(135deg, rgba(250, 250, 250, 1) 0%, rgba(245, 245, 245, 1) 100%);
+    background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.02) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .bg-agtech-gradient {
+    background: linear-gradient(135deg, rgba(22, 101, 52, 0.05) 0%, rgba(21, 128, 61, 0.08) 35%, rgba(59, 130, 246, 0.05) 100%);
+  }
+
   /* Modern button styles */
   .btn-modern {
     @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-opacity-50;
