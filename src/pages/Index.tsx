@@ -1,32 +1,92 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Leaf, BarChart3, Globe } from 'lucide-react';
+import { ArrowRight, Leaf, BarChart3, Globe, CheckCircle, Rocket } from 'lucide-react';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section - AMYRES Cream Background */}
-      <section className="bg-amyres-cream section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
-        <div className="text-center animate-fadeInUp">
-          <h1 className="heading-xl mb-8">
-            Welcome to{' '}
-            <span className="gradient-text">AMYRES AGTECH</span>
-          </h1>
-          <p className="text-body text-xl mb-12 max-w-4xl mx-auto">
-            Your trusted partner in agricultural research, innovation, and development. 
-            Empowering farmers and agribusinesses with cutting-edge technology and data-driven solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/services" className="btn-modern btn-primary group">
-              <span className="flex items-center gap-2">
-                Explore Our Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </Link>
-            <Link to="/about" className="btn-modern btn-outline">
-              Learn More About Us
-            </Link>
+      {/* Hero Section with Blue-Green Gradient Background */}
+      <section className="bg-amyres-gradient section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24 min-h-screen flex items-center">
+        <div className="w-full">
+          <div className="text-center animate-fadeInUp mb-16">
+            <h1 className="heading-xl mb-8 text-white">
+              Welcome to{' '}
+              <span className="text-amyres-green font-bold">AMYRES AGTECH</span>
+            </h1>
+            <p className="text-white/90 text-xl mb-12 max-w-4xl mx-auto">
+              Powering insightful innovations for sustainable agriculture
+            </p>
+            <p className="text-white/80 text-lg italic mb-12 max-w-3xl mx-auto">
+              "We don't just deliver AgTech, we build it with you, for you"
+            </p>
+          </div>
+
+          {/* Discovery Call Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left Content */}
+            <div className="glass-strong rounded-3xl p-8 lg:p-12 bg-white/10 backdrop-blur-lg">
+              <div className="flex items-center gap-3 mb-6">
+                <Rocket className="w-8 h-8 text-amyres-green" />
+                <h2 className="heading-lg text-white">
+                  Ready to Transform Your Agricultural Operations?
+                </h2>
+              </div>
+              
+              <p className="text-white/90 text-lg mb-6 leading-relaxed">
+                Join us for a <span className="text-amyres-green font-semibold">Complimentary Discovery Call</span> and discover how 
+                AMYRES AGTECH can revolutionize your farming practices 
+                with cutting-edge research and innovative solutions.
+              </p>
+
+              <div className="mb-8">
+                <h3 className="text-amyres-green text-xl font-semibold mb-4">What You'll Get:</h3>
+                <div className="space-y-3">
+                  {[
+                    "Personalized assessment of your agricultural challenges",
+                    "Expert insights on sustainable farming practices", 
+                    "Customized recommendations for your specific needs",
+                    "Introduction to our innovative AgTech solutions",
+                    "No obligation - initial consultation provided"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-amyres-green flex-shrink-0 mt-0.5" />
+                      <span className="text-white/90">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <Link to="/contact" className="btn-modern group w-full justify-center" style={{background: 'linear-gradient(135deg, #7ed957 0%, #004aad 100%)', color: 'white'}}>
+                <span className="flex items-center gap-2">
+                  📅 BOOK YOUR DISCOVERY CALL NOW
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </Link>
+            </div>
+
+            {/* Right Content - Discovery Call Visual */}
+            <div className="glass rounded-3xl p-8 bg-amyres-green/20 backdrop-blur-sm">
+              <div className="text-center">
+                <div className="inline-block p-6 rounded-full bg-amyres-green/30 mb-6">
+                  <div className="text-6xl">🌱</div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Complimentary Discovery</h3>
+                <p className="text-white/90 text-lg mb-6">
+                  Transform your agricultural operations with our expert guidance
+                </p>
+                
+                <div className="bg-white/20 rounded-2xl p-6 backdrop-blur-sm">
+                  <h4 className="text-amyres-green font-semibold text-lg mb-3">ROI:</h4>
+                  <ul className="text-white/90 text-left space-y-2">
+                    <li>- Spot inefficiencies and boost productivity</li>
+                    <li>- Customized plan on where tech can help</li>
+                    <li>- Expert insights backed by your experience</li>
+                    <li>- Enhanced investor readiness</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -77,26 +137,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section - AMYRES Gradient Background */}
-      <section className="bg-amyres-gradient section-padding">
+      {/* Secondary CTA Section - AMYRES Cream Background */}
+      <section className="bg-amyres-cream section-padding">
         <div className="section-container">
           <div className="text-center animate-fadeInUp delay-600">
             <div className="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
-              <h2 className="heading-lg mb-6 text-white">
-                Ready to Transform Your{' '}
-                <span className="text-amyres-green">Agricultural Business?</span>
+              <h2 className="heading-lg mb-6 text-amyres-blue">
+                Start Your Agricultural{' '}
+                <span className="text-amyres-green">Transformation Today</span>
               </h2>
-              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Join the growing number of farmers and agribusinesses who trust AMYRES AgTech for their research and development needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="btn-modern group" style={{background: 'linear-gradient(135deg, #7ed957 0%, #004aad 100%)', color: 'white'}}>
+                <Link to="/services" className="btn-modern btn-primary group">
                   <span className="flex items-center gap-2">
-                    Start Your Project
+                    Explore Our Services
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Link>
-                <Link to="/about" className="btn-modern bg-white text-amyres-blue hover:bg-amyres-cream-solid">
+                <Link to="/about" className="btn-modern btn-outline">
                   Learn More About Us
                 </Link>
               </div>
