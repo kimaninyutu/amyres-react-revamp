@@ -6,8 +6,8 @@ import { ArrowRight, Leaf, BarChart3, Globe, CheckCircle, Rocket } from 'lucide-
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Blue-Green Gradient Background */}
-      <section className="bg-amyres-gradient section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24 min-h-screen flex items-center">
+      {/* Hero Section with Faded Blue Gradient Header */}
+      <section className="bg-header-gradient section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24 min-h-screen flex items-center">
         <div className="w-full">
           <div className="text-center animate-fadeInUp mb-16">
             <h1 className="heading-xl mb-8 text-white">
@@ -91,8 +91,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section - AMYRES Pattern Background */}
-      <section className="bg-amyres-pattern section-padding">
+      {/* Features Section - Faded Green Background */}
+      <section className="bg-faded-green section-padding">
         <div className="section-container">
           <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="heading-lg mb-6">
@@ -137,8 +137,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Secondary CTA Section - AMYRES Cream Background */}
-      <section className="bg-amyres-cream section-padding">
+      {/* Secondary CTA Section - Most Faded Green Background */}
+      <section className="bg-most-faded-green section-padding">
         <div className="section-container">
           <div className="text-center animate-fadeInUp delay-600">
             <div className="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">

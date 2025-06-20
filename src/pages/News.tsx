@@ -37,20 +37,20 @@ const News: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - AMYRES Cream Background */}
-      <section className="bg-amyres-cream section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
+      {/* Hero Section - Faded Blue Gradient Header */}
+      <section className="bg-header-gradient section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
         <div className="text-center animate-fadeInUp">
-          <h1 className="heading-xl mb-6">
-            <span className="gradient-text">News & Updates</span>
+          <h1 className="heading-xl mb-6 text-white">
+            News & Updates
           </h1>
-          <p className="text-body text-xl max-w-3xl mx-auto">
+          <p className="text-white/90 text-xl max-w-3xl mx-auto">
             Stay informed with the latest developments from our research team.
           </p>
         </div>
       </section>
 
-      {/* Recent Projects - AMYRES Green Background */}
-      <article id="Recent-projects" className="bg-amyres-green section-padding">
+      {/* Recent Projects - Faded Green Background */}
+      <article id="Recent-projects" className="bg-faded-green section-padding">
         <div className="section-container">
           <div className="mb-8">
             <h2 className="heading-lg mb-4 text-amyres-blue">Recent Projects and Activities</h2>
@@ -98,8 +98,8 @@ const News: React.FC = () => {
         </div>
       </article>
 
-      {/* Featured Service - AMYRES Pattern Background */}
-      <article id="Featured-service" className="bg-amyres-pattern section-padding">
+      {/* Featured Service - Most Faded Green Background */}
+      <article id="Featured-service" className="bg-most-faded-green section-padding">
         <div className="section-container">
           <div className="mb-8">
             <h2 className="heading-lg mb-4 text-amyres-blue">Featured Service: Comprehensive Data Analytics</h2>
@@ -142,22 +142,22 @@ const News: React.FC = () => {
         </div>
       </article>
 
-      {/* Industry Insights - AMYRES Blue Background */}
-      <article id="Industry-insights" className="bg-amyres-blue section-padding">
+      {/* Industry Insights - Faded Green Background */}
+      <article id="Industry-insights" className="bg-faded-green section-padding">
         <div className="section-container">
           <div className="glass-strong rounded-3xl p-12 lg:p-16 animate-fadeInUp">
             <div className="mb-8">
-              <h2 className="heading-lg mb-4 text-white">
-                <span className="text-amyres-green">Industry Insights</span>
+              <h2 className="heading-lg mb-4 text-amyres-blue">
+                Industry Insights
               </h2>
-              <p className="text-white/90 flex items-center gap-2 font-medium">
-                <i className="fas fa-calendar text-amyres-green"></i>
+              <p className="text-slate-700 flex items-center gap-2 font-medium">
+                <i className="fas fa-calendar text-amyres-teal"></i>
                 Published on: April 1, 2025
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="glass rounded-2xl p-4 bg-white/20 backdrop-blur-sm">
+              <div className="glass rounded-2xl p-4 bg-white/50 backdrop-blur-sm">
                 <Carousel 
                   images={industryInsightsImages}
                   autoPlay={true}
@@ -165,7 +165,7 @@ const News: React.FC = () => {
                 />
               </div>
               <div className="space-y-6">
-                <p className="text-white/90 leading-relaxed text-lg">
+                <p className="text-slate-700 leading-relaxed text-lg">
                   With advancements in artificial intelligence, agricultural research is experiencing a revolution in predictive analytics and decision-making.
                 </p>
                 <button 
@@ -178,8 +178,8 @@ const News: React.FC = () => {
                   </span>
                 </button>
                 {expandedNews === 'news3' && (
-                  <div className="glass rounded-2xl p-6 mt-4 bg-white/30 backdrop-blur-sm animate-fadeInUp">
-                    <p className="text-white leading-relaxed">
+                  <div className="glass rounded-2xl p-6 mt-4 bg-white/70 backdrop-blur-sm animate-fadeInUp">
+                    <p className="text-slate-700 leading-relaxed">
                       AI-powered tools are now capable of analyzing extensive datasets for predictive insights, optimizing farming practices.
                     </p>
                   </div>

@@ -102,23 +102,63 @@
     @apply py-16 lg:py-24;
   }
 
-  /* AMYRES Brand Background Variations */
+  /* AMYRES Brand Header - Faded Blue Gradient */
+  .bg-header-gradient {
+    background: linear-gradient(135deg, 
+      #004aad 0%, 
+      rgba(0, 74, 173, 0.85) 25%,
+      rgba(0, 74, 173, 0.6) 50%,
+      rgba(0, 74, 173, 0.4) 75%,
+      rgba(0, 74, 173, 0.2) 100%);
+    position: relative;
+  }
+
+  .bg-header-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* AMYRES Body Sections - Alternating Green Tones */
+  .bg-faded-green {
+    background: linear-gradient(135deg, 
+      rgba(126, 217, 87, 0.15) 0%, 
+      rgba(126, 217, 87, 0.12) 50%,
+      rgba(126, 217, 87, 0.08) 100%);
+    position: relative;
+  }
+
+  .bg-most-faded-green {
+    background: linear-gradient(135deg, 
+      rgba(126, 217, 87, 0.08) 0%, 
+      rgba(126, 217, 87, 0.05) 50%,
+      rgba(126, 217, 87, 0.03) 100%);
+    position: relative;
+  }
+
+  .bg-faded-green::before,
+  .bg-most-faded-green::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(126, 217, 87, 0.1) 1px, transparent 0);
+    background-size: 50px 50px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  /* Legacy gradient backgrounds for compatibility */
   .bg-hero-gradient {
     background: linear-gradient(135deg, 
       #c7dbdf 0%, 
       rgba(199, 219, 223, 0.8) 50%,
       rgba(255, 255, 255, 0.9) 100%);
     position: relative;
-  }
-
-  .bg-hero-gradient::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(circle at 20% 50%, rgba(0, 74, 173, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(126, 217, 87, 0.08) 0%, transparent 50%);
-    pointer-events: none;
   }
 
   .bg-amyres-blue {
@@ -135,17 +175,6 @@
       rgba(126, 217, 87, 0.15) 35%, 
       rgba(0, 151, 178, 0.1) 100%);
     position: relative;
-  }
-
-  .bg-amyres-green::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(circle at 1px 1px, rgba(126, 217, 87, 0.2) 1px, transparent 0);
-    background-size: 40px 40px;
-    opacity: 0.3;
-    pointer-events: none;
   }
 
   .bg-amyres-gradient {
@@ -279,27 +308,52 @@
     animation: bounce 0.3s ease-in-out;
   }
 
-  /* Footer modern styling with AMYRES colors */
-  .footer-curved {
+  /* Modern Footer with Rhombus Design */
+  .footer-modern {
     position: relative;
     background: linear-gradient(135deg, 
-      #004aad 0%, 
-      rgba(0, 74, 173, 0.95) 30%,
-      rgba(0, 151, 178, 0.9) 70%,
-      #0097b2 100%);
+      rgba(0, 74, 173, 0.9) 0%, 
+      rgba(0, 74, 173, 0.8) 30%,
+      rgba(0, 74, 173, 0.7) 60%,
+      rgba(0, 74, 173, 0.6) 100%);
   }
 
-  .footer-curved::before {
+  .footer-modern::before {
     content: '';
     position: absolute;
-    top: -50px;
+    top: -60px;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 60px;
     background: linear-gradient(135deg, 
-      rgba(0, 74, 173, 0.8) 0%, 
-      rgba(0, 151, 178, 0.6) 100%);
-    clip-path: ellipse(100% 100% at 50% 0%);
+      rgba(0, 74, 173, 0.4) 0%, 
+      rgba(0, 74, 173, 0.2) 100%);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  }
+
+  .footer-rhombus {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, 
+      rgba(0, 74, 173, 0.6) 0%, 
+      rgba(0, 74, 173, 0.4) 100%);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .footer-rhombus::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background: linear-gradient(135deg, 
+      rgba(126, 217, 87, 0.3) 0%, 
+      rgba(0, 151, 178, 0.3) 100%);
+    border-radius: 8px;
   }
 
   /* Modern shadows */
