@@ -37,33 +37,31 @@ const News: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Primary Light Background */}
-      <section className="bg-primary-light pt-20 pb-16">
-        <div className="section-container">
-          <div className="text-center">
-            <h1 className="heading-xl mb-6">
-              <span className="gradient-text">News & Updates</span>
-            </h1>
-            <p className="text-body text-xl max-w-3xl mx-auto">
-              Stay informed with the latest developments from our research team.
-            </p>
-          </div>
+      {/* Hero Section - AMYRES Cream Background */}
+      <section className="bg-amyres-cream section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24">
+        <div className="text-center animate-fadeInUp">
+          <h1 className="heading-xl mb-6">
+            <span className="gradient-text">News & Updates</span>
+          </h1>
+          <p className="text-body text-xl max-w-3xl mx-auto">
+            Stay informed with the latest developments from our research team.
+          </p>
         </div>
       </section>
 
-      {/* Recent Projects - White Background */}
-      <article id="Recent-projects" className="bg-white section-padding">
+      {/* Recent Projects - AMYRES Green Background */}
+      <article id="Recent-projects" className="bg-amyres-green section-padding">
         <div className="section-container">
           <div className="mb-8">
-            <h2 className="heading-lg mb-4">Recent Projects and Activities</h2>
-            <p className="text-slate-600 flex items-center gap-2">
-              <i className="fas fa-calendar text-emerald-600"></i>
+            <h2 className="heading-lg mb-4 text-amyres-blue">Recent Projects and Activities</h2>
+            <p className="text-slate-700 flex items-center gap-2 font-medium">
+              <i className="fas fa-calendar text-amyres-teal"></i>
               Published on: April 1, 2025
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="glass rounded-2xl p-4">
+            <div className="glass-amyres rounded-3xl p-6 hover:-translate-y-2 transition-all duration-500">
               <Carousel 
                 images={newsImages1}
                 autoPlay={true}
@@ -71,7 +69,7 @@ const News: React.FC = () => {
               />
             </div>
             <div className="space-y-6">
-              <div className="space-y-4 text-slate-600 leading-relaxed">
+              <div className="space-y-4 text-slate-700 leading-relaxed text-lg">
                 <p>
                   We are proud to announce the successful completion and launch of our website. We look forward to impactful engagements.
                 </p>
@@ -81,13 +79,16 @@ const News: React.FC = () => {
               </div>
               <button 
                 onClick={() => toggleExpanded('news1')}
-                className="btn-modern btn-primary"
+                className="btn-modern btn-primary group"
               >
-                {expandedNews === 'news1' ? 'Read Less' : 'Read More'}
+                <span className="flex items-center gap-2">
+                  {expandedNews === 'news1' ? 'Read Less' : 'Read More'}
+                  <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </span>
               </button>
               {expandedNews === 'news1' && (
-                <div className="glass rounded-2xl p-6 mt-4">
-                  <p className="text-slate-600 leading-relaxed">
+                <div className="glass-amyres rounded-2xl p-6 mt-4 animate-fadeInUp">
+                  <p className="text-slate-700 leading-relaxed">
                     This milestone represents a breakthrough in agricultural research, enabling better farm decision-making for increased productivity.
                   </p>
                 </div>
@@ -97,19 +98,19 @@ const News: React.FC = () => {
         </div>
       </article>
 
-      {/* Featured Service - Secondary Light Background */}
-      <article id="Featured-service" className="bg-secondary-light section-padding">
+      {/* Featured Service - AMYRES Pattern Background */}
+      <article id="Featured-service" className="bg-amyres-pattern section-padding">
         <div className="section-container">
           <div className="mb-8">
-            <h2 className="heading-lg mb-4">Featured Service: Comprehensive Data Analytics</h2>
-            <p className="text-slate-600 flex items-center gap-2">
-              <i className="fas fa-calendar text-emerald-600"></i>
+            <h2 className="heading-lg mb-4 text-amyres-blue">Featured Service: Comprehensive Data Analytics</h2>
+            <p className="text-slate-700 flex items-center gap-2 font-medium">
+              <i className="fas fa-calendar text-amyres-teal"></i>
               Published on: April 1, 2025
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="glass rounded-2xl p-4">
+            <div className="glass rounded-3xl p-6 hover:-translate-y-2 transition-all duration-500">
               <Carousel 
                 images={featuredServiceImages}
                 autoPlay={true}
@@ -117,18 +118,21 @@ const News: React.FC = () => {
               />
             </div>
             <div className="space-y-6">
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed text-lg">
                 We have expanded our services to include advanced data analytics to help clients make informed decisions.
               </p>
               <button 
                 onClick={() => toggleExpanded('news2')}
-                className="btn-modern btn-secondary"
+                className="btn-modern btn-secondary group"
               >
-                {expandedNews === 'news2' ? 'Read Less' : 'Read More'}
+                <span className="flex items-center gap-2">
+                  {expandedNews === 'news2' ? 'Read Less' : 'Read More'}
+                  <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </span>
               </button>
               {expandedNews === 'news2' && (
-                <div className="glass rounded-2xl p-6 mt-4">
-                  <p className="text-slate-600 leading-relaxed">
+                <div className="glass rounded-2xl p-6 mt-4 animate-fadeInUp">
+                  <p className="text-slate-700 leading-relaxed">
                     Our data analytics team is equipped with state-of-the-art tools to provide actionable insights.
                   </p>
                 </div>
@@ -138,42 +142,49 @@ const News: React.FC = () => {
         </div>
       </article>
 
-      {/* Industry Insights - Accent Light Background */}
-      <article id="Industry-insights" className="bg-accent-light section-padding">
+      {/* Industry Insights - AMYRES Blue Background */}
+      <article id="Industry-insights" className="bg-amyres-blue section-padding">
         <div className="section-container">
-          <div className="mb-8">
-            <h2 className="heading-lg mb-4">Industry Insights</h2>
-            <p className="text-slate-600 flex items-center gap-2">
-              <i className="fas fa-calendar text-emerald-600"></i>
-              Published on: April 1, 2025
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="glass rounded-2xl p-4">
-              <Carousel 
-                images={industryInsightsImages}
-                autoPlay={true}
-                interval={4500}
-              />
-            </div>
-            <div className="space-y-6">
-              <p className="text-slate-600 leading-relaxed">
-                With advancements in artificial intelligence, agricultural research is experiencing a revolution in predictive analytics and decision-making.
+          <div className="glass-strong rounded-3xl p-12 lg:p-16 animate-fadeInUp">
+            <div className="mb-8">
+              <h2 className="heading-lg mb-4 text-white">
+                <span className="text-amyres-green">Industry Insights</span>
+              </h2>
+              <p className="text-white/90 flex items-center gap-2 font-medium">
+                <i className="fas fa-calendar text-amyres-green"></i>
+                Published on: April 1, 2025
               </p>
-              <button 
-                onClick={() => toggleExpanded('news3')}
-                className="btn-modern btn-primary"
-              >
-                {expandedNews === 'news3' ? 'Read Less' : 'Read More'}
-              </button>
-              {expandedNews === 'news3' && (
-                <div className="glass rounded-2xl p-6 mt-4">
-                  <p className="text-slate-600 leading-relaxed">
-                    AI-powered tools are now capable of analyzing extensive datasets for predictive insights, optimizing farming practices.
-                  </p>
-                </div>
-              )}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="glass rounded-2xl p-4 bg-white/20 backdrop-blur-sm">
+                <Carousel 
+                  images={industryInsightsImages}
+                  autoPlay={true}
+                  interval={4500}
+                />
+              </div>
+              <div className="space-y-6">
+                <p className="text-white/90 leading-relaxed text-lg">
+                  With advancements in artificial intelligence, agricultural research is experiencing a revolution in predictive analytics and decision-making.
+                </p>
+                <button 
+                  onClick={() => toggleExpanded('news3')}
+                  className="btn-modern btn-secondary group"
+                >
+                  <span className="flex items-center gap-2">
+                    {expandedNews === 'news3' ? 'Read Less' : 'Read More'}
+                    <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                  </span>
+                </button>
+                {expandedNews === 'news3' && (
+                  <div className="glass rounded-2xl p-6 mt-4 bg-white/30 backdrop-blur-sm animate-fadeInUp">
+                    <p className="text-white leading-relaxed">
+                      AI-powered tools are now capable of analyzing extensive datasets for predictive insights, optimizing farming practices.
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
