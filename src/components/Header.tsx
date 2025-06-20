@@ -44,8 +44,8 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'navbar-scrolled py-2' 
-          : 'navbar-glass py-4'
+          ? 'navbar-header-scrolled py-2' 
+          : 'navbar-header py-4'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -63,10 +63,10 @@ const Header: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
             </div>
             <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
-              <h1 className="text-xl font-bold font-poppins bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold font-poppins text-white">
                 AMYRES AGTECH
               </h1>
-              <p className="text-sm text-slate-600 font-inter">Research • Innovation • Development</p>
+              <p className="text-sm text-white/80 font-inter">Research • Innovation • Development</p>
             </div>
           </Link>
 
@@ -74,21 +74,21 @@ const Header: React.FC = () => {
           <nav className="hidden lg:flex items-center space-x-1">
             <Link 
               to="/" 
-              className="nav-link group relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-md"
+              className="nav-link group relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md"
             >
-              <span className="flex items-center space-x-2 text-slate-700 font-medium font-inter">
-                <i className="fas fa-home text-blue-600"></i>
+              <span className="flex items-center space-x-2 text-white font-medium font-inter">
+                <i className="fas fa-home text-white/90"></i>
                 <span>Home</span>
               </span>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-600 to-emerald-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/70 to-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </Link>
 
             <div className="relative group">
               <Link 
                 to="/about" 
-                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-md text-slate-700 font-medium font-inter"
+                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md text-white font-medium font-inter"
               >
-                <i className="fas fa-info-circle text-purple-600"></i>
+                <i className="fas fa-info-circle text-white/90"></i>
                 <span>About Us</span>
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </Link>
@@ -104,9 +104,9 @@ const Header: React.FC = () => {
             <div className="relative group">
               <Link 
                 to="/products" 
-                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-md text-slate-700 font-medium font-inter"
+                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md text-white font-medium font-inter"
               >
-                <i className="fas fa-box text-emerald-600"></i>
+                <i className="fas fa-box text-white/90"></i>
                 <span>Products</span>
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </Link>
@@ -121,9 +121,9 @@ const Header: React.FC = () => {
             <div className="relative group">
               <Link 
                 to="/services" 
-                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-md text-slate-700 font-medium font-inter"
+                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md text-white font-medium font-inter"
               >
-                <i className="fas fa-cogs text-blue-600"></i>
+                <i className="fas fa-cogs text-white/90"></i>
                 <span>Services</span>
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </Link>
@@ -141,9 +141,9 @@ const Header: React.FC = () => {
             <div className="relative group">
               <Link 
                 to="/news" 
-                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-md text-slate-700 font-medium font-inter"
+                className="nav-link flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md text-white font-medium font-inter"
               >
-                <i className="fas fa-newspaper text-orange-600"></i>
+                <i className="fas fa-newspaper text-white/90"></i>
                 <span>News</span>
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </Link>
@@ -158,18 +158,18 @@ const Header: React.FC = () => {
 
             <Link 
               to="/contact" 
-              className="nav-link relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-md group"
+              className="nav-link relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md group"
             >
-              <span className="flex items-center space-x-2 text-slate-700 font-medium font-inter">
-                <i className="fas fa-phone text-emerald-600"></i>
+              <span className="flex items-center space-x-2 text-white font-medium font-inter">
+                <i className="fas fa-phone text-white/90"></i>
                 <span>Contact</span>
               </span>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-emerald-600 to-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/70 to-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </Link>
 
             {/* Cart Icon */}
-            <Link to="/cart" className="cart-icon ml-4 p-2 rounded-xl hover:bg-white/50 transition-all duration-300">
-              <ShoppingCart className="w-6 h-6 text-slate-700" />
+            <Link to="/cart" className="cart-icon ml-4 p-2 rounded-xl hover:bg-white/20 transition-all duration-300">
+              <ShoppingCart className="w-6 h-6 text-white" />
               {cartCount > 0 && (
                 <span className="cart-badge">
                   {cartCount}
@@ -181,8 +181,8 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-4">
             {/* Mobile Cart Icon */}
-            <Link to="/cart" className="cart-icon p-2 rounded-xl hover:bg-white/50 transition-all duration-300">
-              <ShoppingCart className="w-6 h-6 text-slate-700" />
+            <Link to="/cart" className="cart-icon p-2 rounded-xl hover:bg-white/20 transition-all duration-300">
+              <ShoppingCart className="w-6 h-6 text-white" />
               {cartCount > 0 && (
                 <span className="cart-badge">
                   {cartCount}
@@ -192,11 +192,11 @@ const Header: React.FC = () => {
             
             <button
               onClick={toggleMenu}
-              className="p-3 rounded-xl hover:bg-white/50 transition-all duration-300 hover:shadow-md"
+              className="p-3 rounded-xl hover:bg-white/20 transition-all duration-300 hover:shadow-md"
             >
               {isMenuOpen ? 
-                <X className="h-6 w-6 text-slate-700" /> : 
-                <Menu className="h-6 w-6 text-slate-700" />
+                <X className="h-6 w-6 text-white" /> : 
+                <Menu className="h-6 w-6 text-white" />
               }
             </button>
           </div>

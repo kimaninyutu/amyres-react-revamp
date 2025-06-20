@@ -283,7 +283,50 @@
     animation: float 6s ease-in-out infinite 2s;
   }
 
-  /* Modern navbar styles with AMYRES colors */
+  /* Modern navbar styles with AMYRES fading blue gradient */
+  .navbar-header {
+    background: linear-gradient(135deg, 
+      #004aad 0%, 
+      rgba(0, 74, 173, 0.9) 30%,
+      rgba(0, 74, 173, 0.8) 60%,
+      rgba(0, 74, 173, 0.6) 100%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 74, 173, 0.15);
+    position: relative;
+  }
+
+  .navbar-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .navbar-header-scrolled {
+    background: linear-gradient(135deg, 
+      #004aad 0%, 
+      rgba(0, 74, 173, 0.95) 30%,
+      rgba(0, 74, 173, 0.85) 60%,
+      rgba(0, 74, 173, 0.7) 100%);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 4px 20px rgba(0, 74, 173, 0.2);
+    position: relative;
+  }
+
+  .navbar-header-scrolled::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Legacy navbar styles for compatibility */
   .navbar-glass {
     backdrop-filter: blur(20px);
     background: rgba(199, 219, 223, 0.85);
