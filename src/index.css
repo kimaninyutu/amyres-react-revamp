@@ -36,6 +36,13 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* AMYRES Brand Colors */
+    --amyres-blue: 223 100% 34%;
+    --amyres-green: 84 69% 61%;
+    --amyres-teal: 190 100% 35%;
+    --amyres-black: 0 0% 0%;
+    --amyres-cream: 194 32% 82%;
   }
 
   .dark {
@@ -95,12 +102,12 @@
     @apply py-16 lg:py-24;
   }
 
-  /* Enhanced alternating background variations */
+  /* AMYRES Brand Background Variations */
   .bg-hero-gradient {
     background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 1) 0%, 
-      rgba(248, 250, 252, 0.8) 50%,
-      rgba(239, 246, 255, 0.9) 100%);
+      #c7dbdf 0%, 
+      rgba(199, 219, 223, 0.8) 50%,
+      rgba(255, 255, 255, 0.9) 100%);
     position: relative;
   }
 
@@ -109,122 +116,133 @@
     position: absolute;
     inset: 0;
     background-image: 
-      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, rgba(0, 74, 173, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(126, 217, 87, 0.08) 0%, transparent 50%);
     pointer-events: none;
   }
 
-  .bg-agtech-gradient {
+  .bg-amyres-blue {
     background: linear-gradient(135deg, 
-      rgba(34, 197, 94, 0.08) 0%, 
-      rgba(16, 185, 129, 0.12) 35%, 
-      rgba(6, 182, 212, 0.08) 100%);
+      #004aad 0%, 
+      rgba(0, 74, 173, 0.9) 50%,
+      rgba(0, 151, 178, 0.8) 100%);
     position: relative;
   }
 
-  .bg-agtech-gradient::before {
+  .bg-amyres-green {
+    background: linear-gradient(135deg, 
+      rgba(126, 217, 87, 0.1) 0%, 
+      rgba(126, 217, 87, 0.15) 35%, 
+      rgba(0, 151, 178, 0.1) 100%);
+    position: relative;
+  }
+
+  .bg-amyres-green::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image: 
-      radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.15) 1px, transparent 0);
+      radial-gradient(circle at 1px 1px, rgba(126, 217, 87, 0.2) 1px, transparent 0);
     background-size: 40px 40px;
     opacity: 0.3;
     pointer-events: none;
   }
 
-  .bg-premium-blue {
+  .bg-amyres-gradient {
     background: linear-gradient(135deg, 
-      rgba(59, 130, 246, 0.06) 0%, 
-      rgba(147, 51, 234, 0.08) 50%,
-      rgba(99, 102, 241, 0.06) 100%);
+      #0097b2 0%, 
+      rgba(0, 151, 178, 0.8) 30%,
+      rgba(126, 217, 87, 0.9) 70%,
+      #7ed957 100%);
     position: relative;
   }
 
-  .bg-premium-blue::before {
+  .bg-amyres-cream {
+    background: linear-gradient(135deg, 
+      #c7dbdf 0%, 
+      rgba(199, 219, 223, 0.95) 50%,
+      rgba(255, 255, 255, 0.9) 100%);
+    position: relative;
+  }
+
+  .bg-amyres-pattern {
+    background: linear-gradient(135deg, 
+      rgba(0, 74, 173, 0.05) 0%, 
+      rgba(126, 217, 87, 0.08) 50%,
+      rgba(0, 151, 178, 0.05) 100%);
+    position: relative;
+  }
+
+  .bg-amyres-pattern::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image: 
-      linear-gradient(45deg, transparent 40%, rgba(59, 130, 246, 0.02) 50%, transparent 60%);
-    background-size: 60px 60px;
+      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0, 74, 173, 0.03) 35px, rgba(0, 74, 173, 0.03) 70px);
     pointer-events: none;
   }
 
-  .bg-earth-tone {
-    background: linear-gradient(135deg, 
-      rgba(245, 158, 11, 0.04) 0%, 
-      rgba(217, 119, 6, 0.06) 50%,
-      rgba(180, 83, 9, 0.04) 100%);
-    position: relative;
-  }
-
-  .bg-earth-tone::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(245, 158, 11, 0.02) 35px, rgba(245, 158, 11, 0.02) 70px);
-    pointer-events: none;
-  }
-
-  .bg-glass-section {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.95) 0%, 
-      rgba(248, 250, 252, 0.8) 100%);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-  }
-
-  /* Modern button styles */
+  /* Modern button styles with AMYRES colors */
   .btn-modern {
     @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-opacity-50;
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-500;
+    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
+    @apply text-white shadow-lg hover:shadow-xl;
     background-size: 200% 100%;
     animation: gradient-shift 3s ease infinite;
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg hover:shadow-xl focus:ring-emerald-500;
+    background: linear-gradient(135deg, #7ed957 0%, #0097b2 100%);
+    @apply text-white shadow-lg hover:shadow-xl;
   }
 
   .btn-outline {
-    @apply border-2 border-slate-300 text-slate-700 bg-white/80 backdrop-blur-sm hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50;
+    @apply border-2 border-[#004aad] text-[#004aad] bg-white/80 backdrop-blur-sm hover:bg-[#004aad] hover:text-white;
   }
 
-  /* Glass morphism effects */
+  /* Glass morphism effects with AMYRES colors */
   .glass {
     @apply backdrop-blur-xl bg-white/70 border border-white/20 shadow-2xl;
+  }
+  
+  .glass-amyres {
+    @apply backdrop-blur-xl border shadow-2xl;
+    background: rgba(199, 219, 223, 0.3);
+    border-color: rgba(0, 74, 173, 0.1);
   }
   
   .glass-strong {
     @apply backdrop-blur-2xl bg-white/90 border border-white/30 shadow-2xl;
   }
 
-  /* Modern typography */
+  /* Modern typography with AMYRES brand colors */
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight;
+    color: #000000;
   }
 
   .heading-lg {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold font-poppins leading-tight;
+    color: #000000;
   }
 
   .heading-md {
     @apply text-2xl md:text-3xl font-semibold font-poppins leading-tight;
+    color: #004aad;
   }
 
   .text-body {
-    @apply text-lg text-slate-600 leading-relaxed font-inter;
+    @apply text-lg leading-relaxed font-inter;
+    color: #333333;
   }
 
-  /* Gradient text */
+  /* AMYRES gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
+    @apply bg-clip-text text-transparent;
   }
 
   /* Floating elements */
@@ -236,18 +254,18 @@
     animation: float 6s ease-in-out infinite 2s;
   }
 
-  /* Modern navbar styles */
+  /* Modern navbar styles with AMYRES colors */
   .navbar-glass {
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.85);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    background: rgba(199, 219, 223, 0.85);
+    border-bottom: 1px solid rgba(0, 74, 173, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 74, 173, 0.08);
   }
 
   .navbar-scrolled {
     backdrop-filter: blur(25px);
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    background: rgba(199, 219, 223, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 74, 173, 0.12);
   }
 
   /* Cart icon styles */
@@ -256,17 +274,19 @@
   }
 
   .cart-badge {
-    @apply absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold;
+    background: linear-gradient(135deg, #7ed957 0%, #0097b2 100%);
+    @apply absolute -top-2 -right-2 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold;
     animation: bounce 0.3s ease-in-out;
   }
 
-  /* Footer modern styling */
+  /* Footer modern styling with AMYRES colors */
   .footer-curved {
     position: relative;
     background: linear-gradient(135deg, 
-      rgba(248, 250, 252, 1) 0%, 
-      rgba(241, 245, 249, 0.95) 50%,
-      rgba(226, 232, 240, 0.9) 100%);
+      #004aad 0%, 
+      rgba(0, 74, 173, 0.95) 30%,
+      rgba(0, 151, 178, 0.9) 70%,
+      #0097b2 100%);
   }
 
   .footer-curved::before {
@@ -277,18 +297,55 @@
     right: 0;
     height: 50px;
     background: linear-gradient(135deg, 
-      rgba(248, 250, 252, 1) 0%, 
-      rgba(241, 245, 249, 0.95) 100%);
+      rgba(0, 74, 173, 0.8) 0%, 
+      rgba(0, 151, 178, 0.6) 100%);
     clip-path: ellipse(100% 100% at 50% 0%);
   }
 
   /* Modern shadows */
   .shadow-modern {
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 25px -5px rgba(0, 74, 173, 0.1), 0 10px 10px -5px rgba(0, 74, 173, 0.04);
   }
 
   .shadow-modern-lg {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 25px 50px -12px rgba(0, 74, 173, 0.15);
+  }
+
+  /* AMYRES specific utility classes */
+  .text-amyres-blue {
+    color: #004aad;
+  }
+
+  .text-amyres-green {
+    color: #7ed957;
+  }
+
+  .text-amyres-teal {
+    color: #0097b2;
+  }
+
+  .bg-amyres-blue-solid {
+    background-color: #004aad;
+  }
+
+  .bg-amyres-green-solid {
+    background-color: #7ed957;
+  }
+
+  .bg-amyres-teal-solid {
+    background-color: #0097b2;
+  }
+
+  .bg-amyres-cream-solid {
+    background-color: #c7dbdf;
+  }
+
+  .border-amyres-blue {
+    border-color: #004aad;
+  }
+
+  .border-amyres-green {
+    border-color: #7ed957;
   }
 }
 
@@ -393,19 +450,20 @@
   }
 }
 
-/* Enhanced focus states */
+/* Enhanced focus states with AMYRES colors */
 *:focus {
   outline: none;
 }
 
 *:focus-visible {
-  @apply ring-2 ring-blue-500 ring-offset-2 ring-offset-white;
+  @apply ring-2 ring-offset-2 ring-offset-white;
+  ring-color: #004aad;
 }
 
 /* Modern selection colors */
 ::selection {
-  background: rgba(59, 130, 246, 0.2);
-  color: rgba(30, 64, 175, 1);
+  background: rgba(0, 74, 173, 0.2);
+  color: #004aad;
 }
 
 /* Enhanced mobile responsiveness */
