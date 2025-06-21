@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,28 +107,6 @@
     @apply py-16 lg:py-24;
   }
 
-  /* Moringa-inspired alternating section backgrounds */
-  .bg-moringa-light {
-    background: linear-gradient(135deg, 
-      hsl(var(--moringa-light)) 0%, 
-      rgba(255, 248, 240, 0.8) 100%);
-    position: relative;
-  }
-
-  .bg-moringa-peach {
-    background: linear-gradient(135deg, 
-      hsl(var(--moringa-peach)) 0%, 
-      rgba(255, 235, 205, 0.9) 100%);
-    position: relative;
-  }
-
-  .bg-moringa-cream {
-    background: linear-gradient(135deg, 
-      hsl(var(--moringa-cream)) 0%, 
-      rgba(250, 248, 246, 0.95) 100%);
-    position: relative;
-  }
-
   /* AMYRES Brand Header - Enhanced Blue Gradient */
   .bg-header-gradient {
     background: linear-gradient(135deg, 
@@ -150,22 +129,6 @@
   }
 
   /* AMYRES Body Sections - Moringa-inspired pattern */
-  .bg-faded-green {
-    background: linear-gradient(135deg, 
-      rgba(126, 217, 87, 0.08) 0%, 
-      rgba(255, 255, 255, 0.95) 30%,
-      rgba(248, 250, 252, 1) 100%);
-    position: relative;
-  }
-
-  .bg-most-faded-green {
-    background: linear-gradient(135deg, 
-      rgba(240, 253, 244, 1) 0%, 
-      rgba(248, 250, 252, 1) 50%,
-      rgba(255, 255, 255, 1) 100%);
-    position: relative;
-  }
-
   .bg-alternating-1 {
     background: linear-gradient(135deg, 
       rgba(126, 217, 87, 0.05) 0%, 
@@ -183,21 +146,6 @@
   .bg-alternating-3 {
     background: linear-gradient(135deg, 
       rgba(0, 151, 178, 0.03) 0%, 
-      rgba(255, 255, 255, 1) 100%);
-    position: relative;
-  }
-
-  /* Card backgrounds with subtle variations */
-  .bg-card-light {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.9) 0%, 
-      rgba(248, 250, 252, 1) 100%);
-    position: relative;
-  }
-
-  .bg-card-peach {
-    background: linear-gradient(135deg, 
-      rgba(255, 248, 240, 0.8) 0%, 
       rgba(255, 255, 255, 1) 100%);
     position: relative;
   }
@@ -315,20 +263,6 @@
       radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
     pointer-events: none;
-  }
-
-  /* Legacy navbar styles for compatibility */
-  .navbar-glass {
-    backdrop-filter: blur(20px);
-    background: rgba(199, 219, 223, 0.85);
-    border-bottom: 1px solid rgba(0, 74, 173, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 74, 173, 0.08);
-  }
-
-  .navbar-scrolled {
-    backdrop-filter: blur(25px);
-    background: rgba(199, 219, 223, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 74, 173, 0.12);
   }
 
   /* Cart icon styles */
