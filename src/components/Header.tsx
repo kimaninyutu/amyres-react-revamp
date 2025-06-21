@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-4 group">
             <div className="relative">
               <img 
-                src="/images/amyres-logo.png" 
+                src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png" 
                 alt="AMYRES AGTECH Logo" 
                 className={`object-contain transition-all duration-300 group-hover:scale-110 ${
                   isScrolled ? 'h-10 w-10' : 'h-12 w-12'

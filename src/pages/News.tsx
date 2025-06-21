@@ -44,10 +44,85 @@ const News: React.FC = () => {
             News & Updates
           </h1>
           <p className="text-white/90 text-xl max-w-3xl mx-auto">
-            Stay informed with the latest developments from our research team.
+            "We don't just deliver AgTech, we build it with you, for you"
           </p>
         </div>
       </section>
+
+      {/* Featured Discovery Call Announcement - Most Faded Green Background */}
+      <article className="bg-most-faded-green section-padding">
+        <div className="section-container">
+          <div className="glass-strong rounded-3xl p-12 lg:p-16 animate-fadeInUp">
+            <div className="mb-8 relative">
+              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-amyres-green to-amyres-blue text-white px-4 py-2 rounded-full text-sm font-semibold">
+                Featured
+              </div>
+              <h2 className="heading-lg mb-4 text-amyres-blue">
+                🚀 NEW: Complimentary Discovery Call Available!
+              </h2>
+              <p className="text-slate-700 flex items-center gap-2 font-medium">
+                <i className="fas fa-calendar text-amyres-teal"></i>
+                Published on: January 2025
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="glass rounded-2xl p-4 bg-white/50 backdrop-blur-sm">
+                <div className="discovery-video-container rounded-2xl overflow-hidden">
+                  <video 
+                    className="w-full h-auto discovery-video" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                  >
+                    <source src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png" type="video/mp4" />
+                    <div className="w-full h-64 bg-gradient-to-br from-amyres-green to-amyres-blue rounded-lg flex items-center justify-center">
+                      <div className="text-6xl">🌱</div>
+                    </div>
+                  </video>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="space-y-4 text-slate-700 leading-relaxed text-lg">
+                  <p>
+                    <strong>Ready to Transform Your Agricultural Operations?</strong>
+                  </p>
+                  <p>
+                    We're excited to announce that AMYRES AGTECH is now offering <strong> Complimentary Discovery Calls</strong> to help farmers and agribusinesses revolutionize their operations with cutting-edge research and innovative solutions.
+                  </p>
+                  
+                  <div className="bg-white/70 rounded-2xl p-6 backdrop-blur-sm">
+                    <h3 className="text-amyres-blue text-lg font-semibold mb-3">What You'll Get in Your Discovery Call:</h3>
+                    <ul className="text-slate-700 space-y-2">
+                      <li>✅ Personalized assessment of your agricultural challenges</li>
+                      <li>✅ Expert insights on sustainable farming practices</li>
+                      <li>✅ Customized recommendations for your specific needs</li>
+                      <li>✅ Introduction to our innovative AgTech solutions</li>
+                      <li>✅ No obligation - completely FREE consultation</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="text-center">
+                  <a 
+                    href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-modern btn-primary group inline-flex"
+                  >
+                    <span className="flex items-center gap-2">
+                      📅 Book Your Discovery Call Now
+                      <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </span>
+                  </a>
+                  <p className="text-slate-600 text-sm mt-2">Limited slots available - Book today!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
       {/* Recent Projects - Faded Green Background */}
       <article id="Recent-projects" className="bg-faded-green section-padding">

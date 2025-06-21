@@ -5,21 +5,21 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Primary Light Background */}
-      <section className="bg-primary-light pt-20 pb-16">
+      <section className="bg-header-gradient pt-20 pb-16">
         <div className="section-container">
           <div className="text-center mb-16">
-            <h1 className="heading-xl mb-6">
-              <span className="gradient-text">About AMYRES AgTech</span>
+            <h1 className="heading-xl mb-6 text-white">
+              About AMYRES AGTECH
             </h1>
-            <p className="text-body text-xl max-w-3xl mx-auto">
-              Bridging the gap between agricultural research and practical solutions for Kenyan farmers since 2023.
+            <p className="text-white/90 text-xl max-w-3xl mx-auto">
+              We don't just deliver AgTech, we build it with you, for you
             </p>
           </div>
         </div>
       </section>
 
-      {/* Background Section - White Background */}
-      <section id="background" className="bg-white section-padding">
+      {/* Background Section - Faded Green Background */}
+      <section id="background" className="bg-faded-green section-padding">
         <div className="section-container">
           <div className="text-center mb-12">
             <h2 className="heading-lg mb-6 flex items-center justify-center gap-4">
@@ -33,13 +33,16 @@ const About: React.FC = () => {
                 <h3 className="heading-md text-slate-800 mb-4">Our History</h3>
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p>
-                    AMYRES AgTech is a startup contract research, innovation and consultancy organization established in 2023 in response to the growing need for a dedicated research organization that could <strong className="text-slate-800">bridge the gap between scientific research and practical, field-based solutions for Kenyan farmers.</strong>
+                    Amyres Agtech is an agritech research and innovation organization established in 2023 in response to the growing need for a dedicated research organization that could <strong className="text-slate-800">bridge the gap between scientific research and practical, field-based solutions for Kenyan farmers.</strong>
                   </p>
                   <p>
                     The founders, a team of experienced professionals in agricultural science, data science and statistical programming, recognized that while Kenya had a strong base of agricultural research, much of the knowledge was not being effectively transferred to farmers or adapted to local contexts.
                   </p>
                   <p>
-                    This created an urgent need for an organization that could work directly with farmers, and collaborate with local and international partners to <strong className="text-slate-800">translate research findings into actionable insights.</strong>
+                    This created an urgent need for an organization that could work directly with farmers/growers and collaborate with local and international partners to <strong className="text-slate-800">translate research findings into actionable insights.</strong>
+                  </p>
+                  <p>
+                    We are committed to transforming agriculture through research, data and technology.
                   </p>
                 </div>
               </div>
@@ -67,8 +70,28 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* What We Do Section - Secondary Light Background */}
-      <section id="what-we-do" className="bg-secondary-light section-padding">
+      {/* Mission Section - Most Faded Green Background */}
+      <section id="mission" className="bg-most-faded-green section-padding">
+        <div className="section-container">
+          <div className="text-center mb-12">
+            <h2 className="heading-lg mb-6 flex items-center justify-center gap-4">
+              <i className="fas fa-bullseye text-blue-600"></i>
+              <span className="gradient-text">Our Mission</span>
+            </h2>
+          </div>
+          <div className="glass rounded-3xl p-10 text-center hover:-translate-y-2 transition-all duration-500 max-w-4xl mx-auto">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <i className="fas fa-rocket text-white text-2xl"></i>
+            </div>
+            <p className="text-slate-700 leading-relaxed text-lg">
+              To accelerate the adoption of sustainable agricultural innovations by integrating research, digital solutions and data intelligence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section - Faded Green Background */}
+      <section id="what-we-do" className="bg-faded-green section-padding">
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-6 flex items-center justify-center gap-4">
@@ -76,73 +99,89 @@ const About: React.FC = () => {
               <span className="gradient-text">What We Do</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-6xl mx-auto">
+            {/* Research and Innovation */}
+            <div id="research" className="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="fas fa-seedling text-white text-2xl"></i>
+                <i className="fas fa-microscope text-white text-2xl"></i>
               </div>
-              <h3 className="heading-md text-slate-800 mb-6">Agricultural Research and Technology Development</h3>
+              <h3 className="heading-md text-slate-800 mb-6">Research and Innovation</h3>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  As a research-driven organization, AMYRES AgTech recognizes the critical role of research in value chain development within the agriculture sector. Research drives innovation, enhances efficiency, and creates sustainable solutions that benefit all stakeholders.
+                  We design and implement scientifically rigorous field trials to evaluate the performance of agro-inputs and post-harvest solutions. These trials not only generate high-quality data for regulatory registration but also provide insights that support farmer adoption and effective product positioning for agri-input companies and development partners.
                 </p>
                 <p>
-                  Given the challenges in agricultural data, AMYRES AgTech leverages cutting-edge technologies to deliver robust data and information management solutions. These include <strong className="text-slate-800">advanced farm management information systems (FMIS)</strong>, <strong className="text-slate-800">data analytics platforms powered by AI and machine learning</strong>, mobile farm advisory applications, <strong className="text-slate-800">blockchain-enabled market systems</strong>, and innovative Agri-finance technologies driven by <strong className="text-slate-800">fintech solutions</strong>.
+                  Our research spans the entire agricultural value chain, addressing key issues such as input efficiency, crop and soil health, climate resilience, and post-harvest management. We work closely with farmers, agribusinesses, and stakeholders to ensure that our findings are actionable and context-specific.
                 </p>
+                <div className="bg-white/50 rounded-2xl p-6 mt-6">
+                  <h4 className="text-lg font-semibold text-slate-800 mb-3">Our Research Services:</h4>
+                  <ul className="list-disc list-inside text-slate-600 space-y-2">
+                    <li>Field trial design and management</li>
+                    <li>Agronomic evaluations</li>
+                    <li>Impact assessments</li>
+                    <li>Evidence-based recommendations</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500">
+            
+            {/* Tech Development */}
+            <div id="tech" className="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="fas fa-share-alt text-white text-2xl"></i>
+                <i className="fas fa-laptop-code text-white text-2xl"></i>
               </div>
-              <h3 className="heading-md text-slate-800 mb-6">Knowledge and Technology Transfer</h3>
+              <h3 className="heading-md text-slate-800 mb-6">Tech Development</h3>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  AMYRES AgTech is dedicated to ensuring that research findings/technologies are disseminated to farmers and other stakeholders. To enhance these efforts, AMYRES AgTech integrates digital solutions to increase productive efficiency, reduce resource waste, improve market access, and support sustainability.
+                  To complement our research, AMYRES AgTech develops and deploys contemporary digital technologies that promote sustainable and inclusive agriculture. Our digital innovation arm focuses on designing solutions that are co-created with end users and tailored for the realities of farming in Kenya and the region.
                 </p>
                 <p>
-                  Therefore, AMYRES AgTech works directly with farmers and collaborates with local and international stakeholders like researchers/scientists, input providers, extension service providers by identifying and addressing challenges at every stage of the value chain.
+                  Through these solutions, we aim to modernize farming practices, enhance productivity, and make data-driven agriculture accessible and actionable for farmers at every scale.
                 </p>
+                <div className="bg-white/50 rounded-2xl p-6 mt-6">
+                  <h4 className="text-lg font-semibold text-slate-800 mb-3">Our Digital Product Suite:</h4>
+                  <ul className="list-disc list-inside text-slate-600 space-y-2">
+                    <li>AI-powered decision support tools for crop diagnostics, yield forecasting, and climate-smart advisory</li>
+                    <li>Farm Management Information Systems (FMIS) that help farmers and agribusinesses plan, track, and report farm operations more efficiently</li>
+                    <li>Mobile farm advisory applications that deliver localized, real-time guidance on agronomic practices, pest alerts, and market prices</li>
+                    <li>AI-driven chatbots, including WhatsApp-based assistants, that provide farmers with instant, 24/7 access to expert knowledge and support</li>
+                    <li>Blockchain-backed market platforms that improve traceability, trust, and transparency across agricultural value chains</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            {/* Agri-Data Management */}
+            <div id="data" className="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                <i className="fas fa-database text-white text-2xl"></i>
+              </div>
+              <h3 className="heading-md text-slate-800 mb-6">Agri-Data Management</h3>
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  At AMYRES AgTech, effective management of agricultural data is a core function that supports our research and digital innovation initiatives. We provide comprehensive agri-data management solutions designed to collect, store, analyze, and visualize complex datasets from farms, value chains, and markets.
+                </p>
+                <p>
+                  Our services include the design and deployment of robust data infrastructure such as cloud-based databases and integrated platforms that ensure data integrity, security, and easy access. We apply advanced data analytics and machine learning to generate actionable insights for smarter decision-making across the agricultural ecosystem.
+                </p>
+                <div className="bg-white/50 rounded-2xl p-6 mt-6">
+                  <h4 className="text-lg font-semibold text-slate-800 mb-3">Key Offerings:</h4>
+                  <ul className="list-disc list-inside text-slate-600 space-y-2">
+                    <li>Custom mobile data collection apps optimized for field conditions, enabling seamless gathering of agronomic, environmental, and market data</li>
+                    <li>Centralized data warehouses that unify diverse data sources—ranging from satellite imagery to farm inputs—for comprehensive analysis</li>
+                    <li>Interactive real-time dashboards built on platforms like Power BI and Tableau to monitor crop health, weather conditions, supply chains, and market dynamics</li>
+                    <li>Predictive analytics models that forecast yields, detect pest and disease outbreaks, and anticipate market demand</li>
+                    <li>Implementation of API-enabled data sharing systems that promote interoperability and collaboration among farmers, researchers, extension agents, and policymakers</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section - Accent Light Background */}
-      <section id="mission-vision" className="bg-accent-light section-padding">
-        <div className="section-container">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-6 flex items-center justify-center gap-4">
-              <i className="fas fa-bullseye text-purple-600"></i>
-              <span className="gradient-text">Mission & Vision</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="glass rounded-3xl p-10 text-center hover:-translate-y-2 transition-all duration-500">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-target text-white text-2xl"></i>
-              </div>
-              <h3 className="heading-md text-slate-800 mb-6">Our Mission</h3>
-              <p className="text-slate-600 leading-relaxed">
-                At AMYRES AgTech, our mission is to enhance agricultural productivity and sustainability by making research-based knowledge and technologies accessible to every farmer, agribusiness, and stakeholder in Kenya.
-              </p>
-            </div>
-            <div className="glass rounded-3xl p-10 text-center hover:-translate-y-2 transition-all duration-500">
-              <div className="w-20 h-20 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-eye text-white text-2xl"></i>
-              </div>
-              <h3 className="heading-md text-slate-800 mb-6">Our Vision</h3>
-              <p className="text-slate-600 leading-relaxed">
-                To become the leading catalyst for sustainable agricultural innovation in Kenya, empowering farmers, agribusinesses, and communities through research-driven solutions that increase productivity, promote environmental sustainability, and enhance food security.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section - AgTech Gradient Background */}
-      <section id="team" className="bg-agtech-gradient section-padding">
+      {/* Team Section - Most Faded Green Background */}
+      <section id="team" className="bg-most-faded-green section-padding">
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-6 flex items-center justify-center gap-4">
@@ -160,7 +199,7 @@ const About: React.FC = () => {
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm">UI/UX Developer</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                Aoko collaborates with farmers to boost productivity through innovative, sustainable strategies while minimizing environmental impact. She leverages this expertise to design intuitive digital solutions.
+                Aoko collaborates with farmers to boost productivity through innovative, sustainable strategies while minimizing environmental impact. She leverages this expertise to design intuitive digital solutions that address the unique challenges of targeted audiences, enhancing user engagement.
               </p>
             </div>
             <div className="glass rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500">
@@ -171,7 +210,7 @@ const About: React.FC = () => {
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm">GIS Specialist</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                With a background in natural resource management, Joseph leads our research data processing, transforming complex spatial and non-spatial datasets into actionable insights.
+                With a background in natural resource management, Joseph leads our research data processing, transforming complex spatial and non-spatial datasets into actionable insights that guide field applications and resource management decisions.
               </p>
             </div>
             <div className="glass rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500">
@@ -182,7 +221,7 @@ const About: React.FC = () => {
                 <span className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-3 py-1 rounded-full text-sm">Biostatistician</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                Amisi oversees our research design and analysis by leveraging his experience in processing complex data, developing predictive models and identifying patterns.
+                Amisi oversees our research design and analysis by leveraging his experience in processing complex data, developing predictive models and identifying patterns to generate actionable industry-insights through summary statistics, visualizations and comprehensive reports.
               </p>
             </div>
           </div>
