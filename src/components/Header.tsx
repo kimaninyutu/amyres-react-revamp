@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-12 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? 'navbar-header-scrolled py-2' 
           : 'navbar-header py-4'
@@ -50,16 +50,19 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo Section */}
+          {/* Logo Section with Rounded Circle */}
           <Link to="/" className="flex items-center space-x-4 group">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png" 
-                alt="AMYRES AGTECH Logo" 
-                className={`object-contain transition-all duration-300 group-hover:scale-110 ${
-                  isScrolled ? 'h-10 w-10' : 'h-12 w-12'
-                }`}
-              />
+              {/* Circular background for logo */}
+              <div className={`rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-2 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20 ${
+                isScrolled ? 'w-12 h-12' : 'w-14 h-14'
+              }`}>
+                <img 
+                  src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png" 
+                  alt="AMYRES AGTECH Logo" 
+                  className={`object-contain w-full h-full transition-all duration-300`}
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
             </div>
             <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>

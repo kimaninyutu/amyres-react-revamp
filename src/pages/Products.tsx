@@ -25,7 +25,7 @@ const Products: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Primary Light Background */}
-      <section className="bg-most-faded-green pt-20 pb-16">
+      <section className="bg-alternating-1 section-padding">
         <div className="section-container">
           <div className="text-center">
             <h1 className="heading-xl mb-6">
@@ -39,7 +39,7 @@ const Products: React.FC = () => {
       </section>
 
       {/* Products in Development Section */}
-      <section className="bg-faded-green section-padding">
+      <section className="bg-alternating-2 section-padding">
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-6">
@@ -50,7 +50,7 @@ const Products: React.FC = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* AGReFIND - Coming Soon */}
-            <div className="glass rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500 border-2 border-dashed border-amyres-green/30">
+            <div className="glass-amyres rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500 border-2 border-dashed border-amyres-green/30">
               <div className="w-20 h-20 bg-gradient-to-br from-amyres-green/20 to-amyres-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <i className="fas fa-mobile-alt text-amyres-green text-3xl"></i>
               </div>
@@ -82,7 +82,7 @@ const Products: React.FC = () => {
             </div>
 
             {/* Auditass - Coming Soon */}
-            <div className="glass rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500 border-2 border-dashed border-amyres-blue/30">
+            <div className="glass-amyres rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500 border-2 border-dashed border-amyres-blue/30">
               <div className="w-20 h-20 bg-gradient-to-br from-amyres-blue/20 to-amyres-teal/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <i className="fas fa-clipboard-check text-amyres-blue text-3xl"></i>
               </div>
@@ -117,10 +117,10 @@ const Products: React.FC = () => {
       </section>
 
       {/* Newsletter Signup Section */}
-      <section className="bg-most-faded-green section-padding">
+      <section className="bg-alternating-3 section-padding">
         <div className="section-container">
           <div className="text-center">
-            <div className="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
+            <div className="glass-amyres rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
               <h2 className="heading-lg mb-6 text-amyres-blue">
                 Stay Updated on Our Product Development
               </h2>

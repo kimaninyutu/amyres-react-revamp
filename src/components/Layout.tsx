@@ -15,14 +15,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto flex items-center justify-center gap-2">
           <i className="fas fa-bullhorn text-amyres-green"></i>
           <span>
-            Stay up to date with our latest innovations! 
+            New Feature Alert! Complimentary Discovery Calls Now Available! 
             <a 
               href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech" 
               target="_blank" 
               rel="noopener noreferrer"
               className="ml-2 text-amyres-green hover:text-white transition-colors duration-300 font-semibold underline"
             >
-              Book Your Free Discovery Call →
+              Learn More →
             </a>
           </span>
         </div>

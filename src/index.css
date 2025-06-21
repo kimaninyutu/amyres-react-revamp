@@ -42,6 +42,11 @@
     --amyres-teal: 190 100% 35%;
     --amyres-black: 0 0% 0%;
     --amyres-cream: 194 32% 82%;
+    
+    /* Moringa-inspired alternating backgrounds */
+    --moringa-light: 24 100% 95%;
+    --moringa-peach: 18 100% 88%;
+    --moringa-cream: 30 50% 96%;
   }
 
   .dark {
@@ -101,14 +106,36 @@
     @apply py-16 lg:py-24;
   }
 
-  /* AMYRES Brand Header - Faded Blue Gradient */
+  /* Moringa-inspired alternating section backgrounds */
+  .bg-moringa-light {
+    background: linear-gradient(135deg, 
+      hsl(var(--moringa-light)) 0%, 
+      rgba(255, 248, 240, 0.8) 100%);
+    position: relative;
+  }
+
+  .bg-moringa-peach {
+    background: linear-gradient(135deg, 
+      hsl(var(--moringa-peach)) 0%, 
+      rgba(255, 235, 205, 0.9) 100%);
+    position: relative;
+  }
+
+  .bg-moringa-cream {
+    background: linear-gradient(135deg, 
+      hsl(var(--moringa-cream)) 0%, 
+      rgba(250, 248, 246, 0.95) 100%);
+    position: relative;
+  }
+
+  /* AMYRES Brand Header - Enhanced Blue Gradient */
   .bg-header-gradient {
     background: linear-gradient(135deg, 
       #004aad 0%, 
-      rgba(0, 74, 173, 0.85) 25%,
-      rgba(0, 74, 173, 0.6) 50%,
-      rgba(0, 74, 173, 0.4) 75%,
-      rgba(0, 74, 173, 0.2) 100%);
+      rgba(0, 74, 173, 0.95) 25%,
+      rgba(0, 151, 178, 0.9) 50%,
+      rgba(126, 217, 87, 0.8) 75%,
+      rgba(126, 217, 87, 0.6) 100%);
     position: relative;
   }
 
@@ -117,97 +144,62 @@
     position: absolute;
     inset: 0;
     background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
 
-  /* AMYRES Body Sections - Alternating Green Tones */
+  /* AMYRES Body Sections - Moringa-inspired pattern */
   .bg-faded-green {
     background: linear-gradient(135deg, 
-      rgba(126, 217, 87, 0.15) 0%, 
-      rgba(126, 217, 87, 0.12) 50%,
-      rgba(126, 217, 87, 0.08) 100%);
+      rgba(126, 217, 87, 0.08) 0%, 
+      rgba(255, 255, 255, 0.95) 30%,
+      rgba(248, 250, 252, 1) 100%);
     position: relative;
   }
 
   .bg-most-faded-green {
     background: linear-gradient(135deg, 
-      rgba(126, 217, 87, 0.08) 0%, 
-      rgba(126, 217, 87, 0.05) 50%,
-      rgba(126, 217, 87, 0.03) 100%);
+      rgba(240, 253, 244, 1) 0%, 
+      rgba(248, 250, 252, 1) 50%,
+      rgba(255, 255, 255, 1) 100%);
     position: relative;
   }
 
-  .bg-faded-green::before,
-  .bg-most-faded-green::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(circle at 1px 1px, rgba(126, 217, 87, 0.1) 1px, transparent 0);
-    background-size: 50px 50px;
-    opacity: 0.2;
-    pointer-events: none;
-  }
-
-  /* Legacy gradient backgrounds for compatibility */
-  .bg-hero-gradient {
+  .bg-alternating-1 {
     background: linear-gradient(135deg, 
-      #c7dbdf 0%, 
-      rgba(199, 219, 223, 0.8) 50%,
-      rgba(255, 255, 255, 0.9) 100%);
+      rgba(126, 217, 87, 0.05) 0%, 
+      rgba(255, 255, 255, 1) 100%);
     position: relative;
   }
 
-  .bg-amyres-blue {
+  .bg-alternating-2 {
     background: linear-gradient(135deg, 
-      #004aad 0%, 
-      rgba(0, 74, 173, 0.9) 50%,
-      rgba(0, 151, 178, 0.8) 100%);
+      rgba(248, 250, 252, 1) 0%, 
+      rgba(241, 245, 249, 1) 100%);
     position: relative;
   }
 
-  .bg-amyres-green {
+  .bg-alternating-3 {
     background: linear-gradient(135deg, 
-      rgba(126, 217, 87, 0.1) 0%, 
-      rgba(126, 217, 87, 0.15) 35%, 
-      rgba(0, 151, 178, 0.1) 100%);
+      rgba(0, 151, 178, 0.03) 0%, 
+      rgba(255, 255, 255, 1) 100%);
     position: relative;
   }
 
-  .bg-amyres-gradient {
+  /* Card backgrounds with subtle variations */
+  .bg-card-light {
     background: linear-gradient(135deg, 
-      #0097b2 0%, 
-      rgba(0, 151, 178, 0.8) 30%,
-      rgba(126, 217, 87, 0.9) 70%,
-      #7ed957 100%);
+      rgba(255, 255, 255, 0.9) 0%, 
+      rgba(248, 250, 252, 1) 100%);
     position: relative;
   }
 
-  .bg-amyres-cream {
+  .bg-card-peach {
     background: linear-gradient(135deg, 
-      #c7dbdf 0%, 
-      rgba(199, 219, 223, 0.95) 50%,
-      rgba(255, 255, 255, 0.9) 100%);
+      rgba(255, 248, 240, 0.8) 0%, 
+      rgba(255, 255, 255, 1) 100%);
     position: relative;
-  }
-
-  .bg-amyres-pattern {
-    background: linear-gradient(135deg, 
-      rgba(0, 74, 173, 0.05) 0%, 
-      rgba(126, 217, 87, 0.08) 50%,
-      rgba(0, 151, 178, 0.05) 100%);
-    position: relative;
-  }
-
-  .bg-amyres-pattern::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0, 74, 173, 0.03) 35px, rgba(0, 74, 173, 0.03) 70px);
-    pointer-events: none;
   }
 
   /* Modern button styles with AMYRES colors */
@@ -238,7 +230,7 @@
   
   .glass-amyres {
     @apply backdrop-blur-xl border shadow-2xl;
-    background: rgba(199, 219, 223, 0.3);
+    background: rgba(255, 255, 255, 0.85);
     border-color: rgba(0, 74, 173, 0.1);
   }
   
@@ -249,12 +241,12 @@
   /* Modern typography with AMYRES brand colors */
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight;
-    color: #000000;
+    color: #1e293b;
   }
 
   .heading-lg {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold font-poppins leading-tight;
-    color: #000000;
+    color: #1e293b;
   }
 
   .heading-md {
@@ -264,7 +256,7 @@
 
   .text-body {
     @apply text-lg leading-relaxed font-inter;
-    color: #333333;
+    color: #475569;
   }
 
   /* AMYRES gradient text */
@@ -282,13 +274,13 @@
     animation: float 6s ease-in-out infinite 2s;
   }
 
-  /* Modern navbar styles with AMYRES fading blue gradient */
+  /* Modern navbar styles with AMYRES enhanced gradient */
   .navbar-header {
     background: linear-gradient(135deg, 
       #004aad 0%, 
-      rgba(0, 74, 173, 0.9) 30%,
-      rgba(0, 74, 173, 0.8) 60%,
-      rgba(0, 74, 173, 0.6) 100%);
+      rgba(0, 74, 173, 0.95) 20%,
+      rgba(0, 151, 178, 0.9) 60%,
+      rgba(126, 217, 87, 0.8) 100%);
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 32px rgba(0, 74, 173, 0.15);
     position: relative;
@@ -307,9 +299,9 @@
   .navbar-header-scrolled {
     background: linear-gradient(135deg, 
       #004aad 0%, 
-      rgba(0, 74, 173, 0.95) 30%,
-      rgba(0, 74, 173, 0.85) 60%,
-      rgba(0, 74, 173, 0.7) 100%);
+      rgba(0, 74, 173, 0.98) 20%,
+      rgba(0, 151, 178, 0.95) 60%,
+      rgba(126, 217, 87, 0.85) 100%);
     backdrop-filter: blur(25px);
     box-shadow: 0 4px 20px rgba(0, 74, 173, 0.2);
     position: relative;
@@ -350,14 +342,14 @@
     animation: bounce 0.3s ease-in-out;
   }
 
-  /* Modern Footer with Rhombus Design */
+  /* Enhanced Footer with modern design */
   .footer-modern {
     position: relative;
     background: linear-gradient(135deg, 
-      rgba(0, 74, 173, 0.9) 0%, 
-      rgba(0, 74, 173, 0.8) 30%,
-      rgba(0, 74, 173, 0.7) 60%,
-      rgba(0, 74, 173, 0.6) 100%);
+      rgba(0, 74, 173, 0.95) 0%, 
+      rgba(0, 151, 178, 0.9) 30%,
+      rgba(126, 217, 87, 0.8) 70%,
+      rgba(126, 217, 87, 0.6) 100%);
   }
 
   .footer-modern::before {
@@ -369,33 +361,8 @@
     height: 60px;
     background: linear-gradient(135deg, 
       rgba(0, 74, 173, 0.4) 0%, 
-      rgba(0, 74, 173, 0.2) 100%);
+      rgba(126, 217, 87, 0.2) 100%);
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
-  }
-
-  .footer-rhombus {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, 
-      rgba(0, 74, 173, 0.6) 0%, 
-      rgba(0, 74, 173, 0.4) 100%);
-    border-radius: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-  }
-
-  .footer-rhombus::before {
-    content: '';
-    position: absolute;
-    inset: 10px;
-    background: linear-gradient(135deg, 
-      rgba(126, 217, 87, 0.3) 0%, 
-      rgba(0, 151, 178, 0.3) 100%);
-    border-radius: 8px;
   }
 
   /* Modern shadows */
