@@ -120,7 +120,7 @@ const Products: React.FC = () => {
       <section className="bg-most-faded-green section-padding">
         <div className="section-container">
           <div className="text-center">
-            <div class="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
+            <div className="glass rounded-3xl p-12 lg:p-16 max-w-4xl mx-auto">
               <h2 className="heading-lg mb-6 text-amyres-blue">
                 Stay Updated on Our Product Development
               </h2>
