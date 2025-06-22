@@ -8,7 +8,6 @@ import MobileNavigation from './MobileNavigation';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [cartCount, setCartCount] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,26 +15,6 @@ const Header: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    // Listen for cart updates
-    const handleCartUpdate = () => {
-      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      setCartCount(cart.reduce((sum: number, item: any) => sum + item.quantity, 0));
-    };
-
-    // Initial load
-    handleCartUpdate();
-    
-    // Listen for storage changes
-    window.addEventListener('storage', handleCartUpdate);
-    window.addEventListener('cartUpdated', handleCartUpdate);
-    
-    return () => {
-      window.removeEventListener('storage', handleCartUpdate);
-      window.removeEventListener('cartUpdated', handleCartUpdate);
-    };
   }, []);
 
   const toggleMenu = (): void => {
@@ -61,13 +40,12 @@ const Header: React.FC = () => {
             <Logo isScrolled={isScrolled} />
 
             {/* Desktop Navigation */}
-            <DesktopNavigation cartCount={cartCount} />
+            <DesktopNavigation />
 
             {/* Mobile Navigation */}
             <MobileNavigation 
               isMenuOpen={isMenuOpen}
               toggleMenu={toggleMenu}
-              cartCount={cartCount}
             />
           </div>
         </div>

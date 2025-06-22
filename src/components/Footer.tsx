@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
 
       {/* Main footer content with modern styling */}
       <div className="footer-modern">
-        {/* Geometric rhombus design element */}
-        <div className="footer-rhombus">
-          <div className="absolute inset-0 flex items-center justify-center transform -rotate-45">
-            <div className="text-white text-lg font-bold">A</div>
+        {/* Centered "A" symbol */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+          <div className="w-24 h-24 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl flex items-center justify-center">
+            <div className="text-white text-3xl font-bold transform -rotate-45">A</div>
           </div>
         </div>
 
