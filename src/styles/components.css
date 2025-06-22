@@ -1,258 +1,166 @@
 
-/* Component styles */
 @tailwind components;
 
+/* Modern glass morphism effects */
 @layer components {
-  /* Modern section styling */
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .section-padding {
-    @apply py-16 lg:py-24;
-  }
-
-  /* AMYRES Brand Header - Enhanced Blue Gradient */
-  .bg-header-gradient {
-    background: linear-gradient(135deg, 
-      #004aad 0%, 
-      rgba(0, 74, 173, 0.95) 25%,
-      rgba(0, 151, 178, 0.9) 50%,
-      rgba(126, 217, 87, 0.8) 75%,
-      rgba(126, 217, 87, 0.6) 100%);
-    position: relative;
-  }
-
-  .bg-header-gradient::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  /* AMYRES Body Sections - Moringa-inspired pattern */
-  .bg-alternating-1 {
-    background: linear-gradient(135deg, 
-      rgba(126, 217, 87, 0.05) 0%, 
-      rgba(255, 255, 255, 1) 100%);
-    position: relative;
-  }
-
-  .bg-alternating-2 {
-    background: linear-gradient(135deg, 
-      rgba(248, 250, 252, 1) 0%, 
-      rgba(241, 245, 249, 1) 100%);
-    position: relative;
-  }
-
-  .bg-alternating-3 {
-    background: linear-gradient(135deg, 
-      rgba(0, 151, 178, 0.03) 0%, 
-      rgba(255, 255, 255, 1) 100%);
-    position: relative;
-  }
-
-  /* Modern button styles with AMYRES colors */
-  .btn-modern {
-    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-opacity-50;
-  }
-  
-  .btn-primary {
-    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
-    @apply text-white shadow-lg hover:shadow-xl;
-    background-size: 200% 100%;
-    animation: gradient-shift 3s ease infinite;
-  }
-  
-  .btn-secondary {
-    background: linear-gradient(135deg, #7ed957 0%, #0097b2 100%);
-    @apply text-white shadow-lg hover:shadow-xl;
-  }
-
-  .btn-outline {
-    @apply border-2 border-[#004aad] text-[#004aad] bg-white/80 backdrop-blur-sm hover:bg-[#004aad] hover:text-white;
-  }
-
-  /* Glass morphism effects with AMYRES colors */
   .glass {
-    @apply backdrop-blur-xl bg-white/70 border border-white/20 shadow-2xl;
-  }
-  
-  .glass-amyres {
-    @apply backdrop-blur-xl border shadow-2xl;
-    background: rgba(255, 255, 255, 0.85);
-    border-color: rgba(0, 74, 173, 0.1);
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
   }
   
   .glass-strong {
-    @apply backdrop-blur-2xl bg-white/90 border border-white/30 shadow-2xl;
+    @apply bg-white/15 backdrop-blur-xl border border-white/30 shadow-2xl;
   }
-
-  /* Modern typography with AMYRES brand colors */
-  .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight;
-    color: #1e293b;
+  
+  .glass-subtle {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg;
   }
+}
 
-  .heading-lg {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-poppins leading-tight;
-    color: #1e293b;
-  }
-
-  .heading-md {
-    @apply text-2xl md:text-3xl font-semibold font-poppins leading-tight;
-    color: #004aad;
-  }
-
-  .text-body {
-    @apply text-lg leading-relaxed font-inter;
-    color: #475569;
-  }
-
-  /* AMYRES gradient text */
-  .gradient-text {
-    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
-    @apply bg-clip-text text-transparent;
-  }
-
-  /* Modern navbar styles with AMYRES enhanced gradient */
+/* Header styles with modern gradients */
+@layer components {
   .navbar-header {
-    background: linear-gradient(135deg, 
-      #004aad 0%, 
-      rgba(0, 74, 173, 0.95) 20%,
-      rgba(0, 151, 178, 0.9) 60%,
-      rgba(126, 217, 87, 0.8) 100%);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px rgba(0, 74, 173, 0.15);
-    position: relative;
+    @apply bg-gradient-to-r from-blue-900 via-blue-800 to-teal-600 backdrop-blur-md border-b border-white/20 shadow-2xl;
+    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
   }
-
-  .navbar-header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
+  
   .navbar-header-scrolled {
-    background: linear-gradient(135deg, 
-      #004aad 0%, 
-      rgba(0, 74, 173, 0.98) 20%,
-      rgba(0, 151, 178, 0.95) 60%,
-      rgba(126, 217, 87, 0.85) 100%);
-    backdrop-filter: blur(25px);
-    box-shadow: 0 4px 20px rgba(0, 74, 173, 0.2);
-    position: relative;
+    @apply bg-gradient-to-r from-blue-900/95 via-blue-800/95 to-teal-600/95 backdrop-blur-xl border-b border-white/30 shadow-2xl;
+    background: linear-gradient(135deg, rgba(0, 74, 173, 0.95) 0%, rgba(0, 151, 178, 0.95) 50%, rgba(126, 217, 87, 0.95) 100%);
   }
-
-  .navbar-header-scrolled::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
-    pointer-events: none;
+  
+  .bg-header-gradient {
+    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
   }
+}
 
-  /* Cart icon styles */
-  .cart-icon {
-    @apply relative transition-all duration-300 hover:scale-110;
-  }
-
-  .cart-badge {
-    background: linear-gradient(135deg, #7ed957 0%, #0097b2 100%);
-    @apply absolute -top-2 -right-2 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold;
-    animation: bounce 0.3s ease-in-out;
-  }
-
-  /* Enhanced Footer with modern design */
-  .footer-modern {
-    position: relative;
-    background: linear-gradient(135deg, 
-      rgba(0, 74, 173, 0.95) 0%, 
-      rgba(0, 151, 178, 0.9) 30%,
-      rgba(126, 217, 87, 0.8) 70%,
-      rgba(126, 217, 87, 0.6) 100%);
-  }
-
-  .footer-modern::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: linear-gradient(135deg, 
-      rgba(0, 74, 173, 0.4) 0%, 
-      rgba(126, 217, 87, 0.2) 100%);
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-  }
-
-  /* Modern shadows */
-  .shadow-modern {
-    box-shadow: 0 10px 25px -5px rgba(0, 74, 173, 0.1), 0 10px 10px -5px rgba(0, 74, 173, 0.04);
-  }
-
-  .shadow-modern-lg {
-    box-shadow: 0 25px 50px -12px rgba(0, 74, 173, 0.15);
-  }
-
-  /* AMYRES specific utility classes */
-  .text-amyres-blue {
-    color: #004aad;
-  }
-
-  .text-amyres-green {
-    color: #7ed957;
-  }
-
-  .text-amyres-teal {
-    color: #0097b2;
-  }
-
+/* AMYRES Brand Color Utilities */
+@layer components {
   .bg-amyres-blue-solid {
     background-color: #004aad;
   }
-
+  
   .bg-amyres-green-solid {
     background-color: #7ed957;
   }
-
+  
   .bg-amyres-teal-solid {
     background-color: #0097b2;
   }
-
-  .bg-amyres-cream-solid {
-    background-color: #c7dbdf;
+  
+  .text-amyres-blue {
+    color: #004aad;
   }
-
-  .border-amyres-blue {
-    border-color: #004aad;
+  
+  .text-amyres-green {
+    color: #7ed957;
   }
-
+  
+  .text-amyres-teal {
+    color: #0097b2;
+  }
+  
   .border-amyres-green {
     border-color: #7ed957;
   }
 }
 
-/* Enhanced mobile responsiveness */
-@media (max-width: 640px) {
+/* Modern button styles */
+@layer components {
   .btn-modern {
-    @apply px-6 py-3 text-sm;
+    @apply inline-flex items-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-transparent backdrop-blur-sm;
   }
+  
+  .btn-primary {
+    @apply btn-modern bg-gradient-to-r from-amyres-green to-amyres-teal text-white hover:from-green-500 hover:to-blue-500 shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply btn-modern bg-white/20 text-white border border-white/30 hover:bg-white/30 backdrop-blur-md;
+  }
+}
 
+/* Typography enhancements */
+@layer components {
   .heading-xl {
-    @apply text-3xl;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight;
   }
-
+  
   .heading-lg {
-    @apply text-2xl;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold font-poppins leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold font-poppins;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-amyres-green to-amyres-teal bg-clip-text text-transparent;
+  }
+}
+
+/* Section containers */
+@layer components {
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+}
+
+/* Footer modern styling */
+@layer components {
+  .footer-modern {
+    @apply relative bg-gradient-to-br from-slate-800 via-slate-900 to-black overflow-hidden;
+  }
+  
+  .footer-rhombus {
+    @apply absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl;
+  }
+}
+
+/* Cart icon styling */
+@layer components {
+  .cart-icon {
+    @apply relative transition-all duration-300;
+  }
+  
+  .cart-badge {
+    @apply absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold shadow-lg;
+  }
+}
+
+/* Circular image utilities */
+@layer components {
+  .img-circular {
+    @apply rounded-full object-cover;
+  }
+  
+  .avatar-sm {
+    @apply w-8 h-8 img-circular;
+  }
+  
+  .avatar-md {
+    @apply w-12 h-12 img-circular;
+  }
+  
+  .avatar-lg {
+    @apply w-16 h-16 img-circular;
+  }
+  
+  .avatar-xl {
+    @apply w-24 h-24 img-circular;
+  }
+}
+
+/* Profile and logo containers */
+@layer components {
+  .logo-container {
+    @apply relative rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-white/20;
+  }
+  
+  .profile-container {
+    @apply relative rounded-full overflow-hidden border-2 border-white/30 shadow-lg;
   }
 }

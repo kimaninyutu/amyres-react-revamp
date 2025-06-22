@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Discovery Call */}
-      <section className="bg-header-gradient section-container relative z-10 pt-32 lg:pt-40 pb-16 lg:pb-24 min-h-screen flex items-center">
+      <section className="bg-header-gradient section-container relative z-10 py-16 lg:py-24 min-h-screen flex items-center">
         <div className="w-full">
           <div className="text-center animate-fadeInUp mb-16">
             <h1 className="heading-xl mb-8 text-white">
