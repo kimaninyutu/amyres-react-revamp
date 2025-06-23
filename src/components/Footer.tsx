@@ -5,8 +5,19 @@ import { X } from 'lucide-react';
 const Footer: React.FC = () => {
   return (
     <footer className="relative mt-20">
+      {/* Stylized "A" symbol positioned to be crossed by the curved line */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="relative w-32 h-32 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl flex items-center justify-center">
+          <div className="text-white text-5xl font-bold transform -rotate-45 relative">
+            A
+            {/* Stylish crossing line */}
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/80 transform -translate-y-1/2 rounded-full shadow-lg"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Curved top edge with modern design */}
-      <div className="relative">
+      <div className="relative z-10">
         <svg 
           className="w-full h-24 fill-current text-slate-100" 
           viewBox="0 0 1200 120" 
@@ -28,17 +39,6 @@ const Footer: React.FC = () => {
 
       {/* Main footer content with modern styling */}
       <div className="footer-modern">
-        {/* Stylized "A" symbol at top center with crossing line */}
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="relative w-32 h-32 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl flex items-center justify-center">
-            <div className="text-white text-5xl font-bold transform -rotate-45 relative">
-              A
-              {/* Stylish crossing line */}
-              <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/80 transform -translate-y-1/2 rounded-full shadow-lg"></div>
-            </div>
-          </div>
-        </div>
-
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-10">
           <div 
