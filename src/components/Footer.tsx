@@ -1,12 +1,23 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
     <footer className="relative mt-20">
+      {/* Stylized "A" symbol positioned to be crossed by the curved line */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="relative w-32 h-32 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl flex items-center justify-center">
+          <div className="text-white text-5xl font-bold transform -rotate-45 relative">
+            A
+            {/* Stylish crossing line */}
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/80 transform -translate-y-1/2 rounded-full shadow-lg"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Curved top edge with modern design */}
-      <div className="relative">
+      <div className="relative z-10">
         <svg 
           className="w-full h-24 fill-current text-slate-100" 
           viewBox="0 0 1200 120" 
@@ -28,13 +39,6 @@ const Footer: React.FC = () => {
 
       {/* Main footer content with modern styling */}
       <div className="footer-modern">
-        {/* Geometric rhombus design element */}
-        <div className="footer-rhombus">
-          <div className="absolute inset-0 flex items-center justify-center transform -rotate-45">
-            <div className="text-white text-lg font-bold">A</div>
-          </div>
-        </div>
-
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-10">
           <div 
@@ -46,7 +50,7 @@ const Footer: React.FC = () => {
           ></div>
         </div>
 
-        <div className="relative container mx-auto px-4 py-16">
+        <div className="relative container mx-auto px-4 py-16 pt-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Section */}
             <div className="lg:col-span-2">
@@ -212,11 +216,11 @@ const Footer: React.FC = () => {
                   </a>
                   <a 
                     href="https://twitter.com/amyresagtech" 
-                    className="w-12 h-12 bg-gradient-to-br from-white/20 to-white/10 rounded-2xl flex items-center justify-center hover:from-blue-400 hover:to-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/20 text-white/90"
+                    className="w-12 h-12 bg-gradient-to-br from-white/20 to-white/10 rounded-2xl flex items-center justify-center hover:from-black hover:to-gray-800 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg backdrop-blur-sm border border-white/20 text-white/90"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-twitter"></i>
+                    <X className="w-4 h-4" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/company/amyresagtech/" 

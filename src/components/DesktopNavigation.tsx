@@ -1,13 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ShoppingCart } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
-interface DesktopNavigationProps {
-  cartCount: number;
-}
-
-const DesktopNavigation: React.FC<DesktopNavigationProps> = ({ cartCount }) => {
+const DesktopNavigation: React.FC = () => {
   return (
     <nav className="hidden lg:flex items-center space-x-1">
       <Link 
@@ -103,15 +99,6 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({ cartCount }) => {
           <span>Contact</span>
         </span>
         <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/70 to-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-      </Link>
-
-      <Link to="/cart" className="cart-icon ml-4 p-2 rounded-xl hover:bg-white/20 transition-all duration-300">
-        <ShoppingCart className="w-6 h-6 text-white" />
-        {cartCount > 0 && (
-          <span className="cart-badge">
-            {cartCount}
-          </span>
-        )}
       </Link>
     </nav>
   );

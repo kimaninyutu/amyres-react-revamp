@@ -1,32 +1,21 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ShoppingCart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface MobileNavigationProps {
   isMenuOpen: boolean;
   toggleMenu: () => void;
-  cartCount: number;
 }
 
 const MobileNavigation: React.FC<MobileNavigationProps> = ({ 
   isMenuOpen, 
-  toggleMenu, 
-  cartCount 
+  toggleMenu
 }) => {
   return (
     <>
       {/* Mobile Menu Button */}
-      <div className="lg:hidden flex items-center space-x-4">
-        <Link to="/cart" className="cart-icon p-2 rounded-xl hover:bg-white/20 transition-all duration-300">
-          <ShoppingCart className="w-6 h-6 text-white" />
-          {cartCount > 0 && (
-            <span className="cart-badge">
-              {cartCount}
-            </span>
-          )}
-        </Link>
-        
+      <div className="lg:hidden flex items-center">
         <button
           onClick={toggleMenu}
           className="p-3 rounded-xl hover:bg-white/20 transition-all duration-300 hover:shadow-md"
