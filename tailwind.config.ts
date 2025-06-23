@@ -66,13 +66,7 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// AMYRES Brand Colors
-				'amyres-blue': '#004aad',
-				'amyres-green': '#7ed957',
-				'amyres-teal': '#0097b2',
-				'amyres-black': '#000000',
-				'amyres-cream': '#a8d5e2'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
