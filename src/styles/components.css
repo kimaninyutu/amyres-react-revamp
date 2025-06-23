@@ -1,0 +1,166 @@
+
+@tailwind components;
+
+/* Modern glass morphism effects */
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .glass-strong {
+    @apply bg-white/15 backdrop-blur-xl border border-white/30 shadow-2xl;
+  }
+  
+  .glass-subtle {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg;
+  }
+}
+
+/* Header styles with modern gradients */
+@layer components {
+  .navbar-header {
+    @apply bg-gradient-to-r from-blue-900 via-blue-800 to-teal-600 backdrop-blur-md border-b border-white/20 shadow-2xl;
+    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
+  }
+  
+  .navbar-header-scrolled {
+    @apply bg-gradient-to-r from-blue-900/95 via-blue-800/95 to-teal-600/95 backdrop-blur-xl border-b border-white/30 shadow-2xl;
+    background: linear-gradient(135deg, rgba(0, 74, 173, 0.95) 0%, rgba(0, 151, 178, 0.95) 50%, rgba(126, 217, 87, 0.95) 100%);
+  }
+  
+  .bg-header-gradient {
+    background: linear-gradient(135deg, #004aad 0%, #0097b2 50%, #7ed957 100%);
+  }
+}
+
+/* AMYRES Brand Color Utilities */
+@layer components {
+  .bg-amyres-blue-solid {
+    background-color: #004aad;
+  }
+  
+  .bg-amyres-green-solid {
+    background-color: #7ed957;
+  }
+  
+  .bg-amyres-teal-solid {
+    background-color: #0097b2;
+  }
+  
+  .text-amyres-blue {
+    color: #004aad;
+  }
+  
+  .text-amyres-green {
+    color: #7ed957;
+  }
+  
+  .text-amyres-teal {
+    color: #0097b2;
+  }
+  
+  .border-amyres-green {
+    border-color: #7ed957;
+  }
+}
+
+/* Modern button styles */
+@layer components {
+  .btn-modern {
+    @apply inline-flex items-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-transparent backdrop-blur-sm;
+  }
+  
+  .btn-primary {
+    @apply btn-modern bg-gradient-to-r from-amyres-green to-amyres-teal text-white hover:from-green-500 hover:to-blue-500 shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply btn-modern bg-white/20 text-white border border-white/30 hover:bg-white/30 backdrop-blur-md;
+  }
+}
+
+/* Typography enhancements */
+@layer components {
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold font-poppins leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold font-poppins;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-amyres-green to-amyres-teal bg-clip-text text-transparent;
+  }
+}
+
+/* Section containers */
+@layer components {
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+}
+
+/* Footer modern styling */
+@layer components {
+  .footer-modern {
+    @apply relative bg-gradient-to-br from-slate-800 via-slate-900 to-black overflow-hidden;
+  }
+  
+  .footer-rhombus {
+    @apply absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl;
+  }
+}
+
+/* Cart icon styling */
+@layer components {
+  .cart-icon {
+    @apply relative transition-all duration-300;
+  }
+  
+  .cart-badge {
+    @apply absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold shadow-lg;
+  }
+}
+
+/* Circular image utilities */
+@layer components {
+  .img-circular {
+    @apply rounded-full object-cover;
+  }
+  
+  .avatar-sm {
+    @apply w-8 h-8 img-circular;
+  }
+  
+  .avatar-md {
+    @apply w-12 h-12 img-circular;
+  }
+  
+  .avatar-lg {
+    @apply w-16 h-16 img-circular;
+  }
+  
+  .avatar-xl {
+    @apply w-24 h-24 img-circular;
+  }
+}
+
+/* Profile and logo containers */
+@layer components {
+  .logo-container {
+    @apply relative rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-white/20;
+  }
+  
+  .profile-container {
+    @apply relative rounded-full overflow-hidden border-2 border-white/30 shadow-lg;
+  }
+}

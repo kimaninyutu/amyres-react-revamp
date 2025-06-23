@@ -6,8 +6,8 @@ import { ArrowRight, CheckCircle, Rocket } from 'lucide-react';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Faded Blue Gradient Header */}
-      <section className="bg-header-gradient section-container relative z-10 pt-8 lg:pt-16 pb-16 lg:pb-24 min-h-screen flex items-center">
+      {/* Hero Section with Discovery Call */}
+      <section className="bg-header-gradient section-container relative z-10 py-16 lg:py-24 min-h-screen flex items-center">
         <div className="w-full">
           <div className="text-center animate-fadeInUp mb-16">
             <h1 className="heading-xl mb-8 text-white">
@@ -52,37 +52,30 @@ const Index = () => {
                 </div>
               </div>
 
-              <a 
-                href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-modern group w-full justify-center mb-4" 
-                style={{background: 'linear-gradient(135deg, #7ed957 0%, #004aad 100%)', color: 'white'}}
-              >
-                <span className="flex items-center gap-2">
-                  📅 Book Your Discovery Call Now
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </a>
-              <p className="text-white/80 text-center text-sm">Limited slots available - Book today!</p>
+              <div className="flex flex-col gap-3">
+                <a 
+                  href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-modern group w-full justify-center mb-4" 
+                  style={{background: 'linear-gradient(135deg, #7ed957 0%, #004aad 100%)', color: 'white'}}
+                >
+                  <span className="flex items-center gap-2">
+                    📅 Book Your Discovery Call Now
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </a>
+                <p className="text-white/80 text-center text-sm">Limited slots available - Book today!</p>
+              </div>
             </div>
 
             {/* Right Content - Discovery Call Visual */}
             <div className="glass rounded-3xl p-8 bg-amyres-green/20 backdrop-blur-sm">
               <div className="text-center">
                 <div className="discovery-video-container rounded-2xl overflow-hidden mb-6">
-                  <video 
-                    className="w-full h-auto discovery-video" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                  >
-                    <source src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png" type="video/mp4" />
-                    <div className="w-full h-64 bg-gradient-to-br from-amyres-green to-amyres-blue rounded-lg flex items-center justify-center">
-                      <div className="text-6xl">🌱</div>
-                    </div>
-                  </video>
+                  <div className="w-full h-64 bg-gradient-to-br from-amyres-green to-amyres-blue rounded-lg flex items-center justify-center">
+                    <div className="text-6xl">🌱</div>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Complimentary Discovery</h3>
                 <p className="text-white/90 text-lg mb-6">
