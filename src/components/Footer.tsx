@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
@@ -29,10 +28,14 @@ const Footer: React.FC = () => {
 
       {/* Main footer content with modern styling */}
       <div className="footer-modern">
-        {/* Centered "A" symbol at top */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-          <div className="w-24 h-24 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl flex items-center justify-center">
-            <div className="text-white text-3xl font-bold transform -rotate-45">A</div>
+        {/* Stylized "A" symbol at top center with crossing line */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="relative w-32 h-32 bg-gradient-to-br from-amyres-green to-amyres-teal rounded-lg transform rotate-45 shadow-2xl flex items-center justify-center">
+            <div className="text-white text-5xl font-bold transform -rotate-45 relative">
+              A
+              {/* Stylish crossing line */}
+              <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/80 transform -translate-y-1/2 rounded-full shadow-lg"></div>
+            </div>
           </div>
         </div>
 
@@ -47,7 +50,7 @@ const Footer: React.FC = () => {
           ></div>
         </div>
 
-        <div className="relative container mx-auto px-4 py-16">
+        <div className="relative container mx-auto px-4 py-16 pt-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Section */}
             <div className="lg:col-span-2">
