@@ -23,7 +23,7 @@ const Logo: React.FC<LogoProps> = ({ isScrolled }) => {
         <h1 className="text-xl font-bold font-poppins text-white">
           AMYRES AGTECH
         </h1>
-        <p className="text-sm text-white/80 font-inter">Research • Innovation • Development</p>
+        <p className="text-sm text-white/80 font-inter">We don't just deliver AgTech, we build it with you, for you</p>
       </div>
     </Link>
   );

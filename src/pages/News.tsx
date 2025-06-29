@@ -68,21 +68,20 @@ const News: React.FC = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="glass rounded-2xl p-4 bg-white/50 backdrop-blur-sm">
-                <div className="discovery-video-container rounded-2xl overflow-hidden">
-                  <video 
-                    className="w-full h-auto discovery-video" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
+                <div className="discovery-video-container rounded-2xl overflow-hidden aspect-video">
+                  <video
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                   >
-                    <source src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png" type="video/mp4" />
-                    <div className="w-full h-64 bg-gradient-to-br from-amyres-green to-amyres-blue rounded-lg flex items-center justify-center">
-                      <div className="text-6xl">🌱</div>
-                    </div>
+                    <source src="/videos/discovery-call.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
                   </video>
                 </div>
               </div>
+
               <div className="space-y-6">
                 <div className="space-y-4 text-slate-700 leading-relaxed text-lg">
                   <p>

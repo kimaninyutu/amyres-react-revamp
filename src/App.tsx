@@ -12,7 +12,7 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
-import Cart from "./pages/Cart";
+
 
 const queryClient = new QueryClient();
 
@@ -31,7 +31,6 @@ const App = () => (
               <Route path="/products" element={<Products />} />
               <Route path="/news" element={<News />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/cart" element={<Cart />} />
             </Routes>
           </Layout>
         </BrowserRouter>

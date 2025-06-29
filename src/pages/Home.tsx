@@ -58,15 +58,21 @@ const Home: React.FC = () => {
 
             <div className="lg:order-first">
               <div className="glass-amyres rounded-3xl p-8 text-center">
-                <div className="w-full h-64 bg-gradient-to-br from-amyres-blue/10 to-amyres-green/10 rounded-2xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <i className="fas fa-video text-6xl text-amyres-blue"></i>
-                    <p className="text-lg font-semibold text-amyres-blue">Discovery Call Preview</p>
-                    <p className="text-sm text-slate-600">Transform your agricultural operations</p>
-                  </div>
+                <div className="rounded-2xl overflow-hidden aspect-video">
+                  <video
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                  >
+                    <source src="/videos/discovery-call.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
