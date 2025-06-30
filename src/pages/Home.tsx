@@ -152,7 +152,7 @@ const Home: React.FC = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                      href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                      href="https://calendly.com/aoko-amyres/discovery-session"
                       className="btn-modern btn-primary"
                       target="_blank"
                       rel="noopener noreferrer"

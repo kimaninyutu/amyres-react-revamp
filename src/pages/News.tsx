@@ -114,7 +114,7 @@ const News: React.FC = () => {
 
                   <div className="text-center">
                     <a
-                        href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                        href="https://calendly.com/aoko-amyres/discovery-session"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"

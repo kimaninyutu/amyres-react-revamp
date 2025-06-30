@@ -22,7 +22,7 @@ const AnnouncementBar: React.FC = () => {
                         <span>
               New Feature Alert! Complimentary Discovery Calls Now Available!
               <a
-                  href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                  href="https://calendly.com/aoko-amyres/discovery-session"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-amyres-green hover:text-white transition-colors duration-300 font-semibold underline"
