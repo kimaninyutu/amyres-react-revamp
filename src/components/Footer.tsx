@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6 sm:mb-8">
                   <div className="relative flex-shrink-0">
                     <img
-                        src="/placeholder.svg?height=64&width=64"
+                        src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png"
                         alt="AMYRES AGTECH Logo"
                         className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover shadow-lg"
                     />

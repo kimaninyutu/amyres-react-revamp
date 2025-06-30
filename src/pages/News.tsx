@@ -8,22 +8,22 @@ const News: React.FC = () => {
   const [expandedNews, setExpandedNews] = useState<string | null>(null)
 
   const newsImages1 = [
-    { src: "/placeholder.svg?height=400&width=600", alt: "Project Image 1" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Project Image 2" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Project Image 3" },
+    { src: "/images/Home.png", alt: "Project Image 1" },
+    { src: "/images/About.png", alt: "Project Image 2" },
+    { src: "/images/Contact.png", alt: "Project Image 3" },
   ]
 
   const featuredServiceImages = [
-    { src: "/placeholder.svg?height=300&width=400", alt: "Service Image 1" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Service Image 2" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Service Image 3" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Service Image 4" },
+    { src: "/images/FS/1.png", alt: "Service Image 1" },
+    { src: "/images/FS/2.png", alt: "Service Image 2" },
+    { src: "/images/FS/3.png", alt: "Service Image 3" },
+    { src: "/images/FS/4.png", alt: "Service Image 4" },
   ]
 
   const industryInsightsImages = [
-    { src: "/placeholder.svg?height=350&width=500", alt: "Industry Image 1" },
-    { src: "/placeholder.svg?height=350&width=500", alt: "Industry Image 2" },
-    { src: "/placeholder.svg?height=350&width=500", alt: "Industry Image 3" },
+    { src: "/images/Industry insights/1.png", alt: "Industry Image 1" },
+    { src: "/images/Industry insights/2.png", alt: "Industry Image 2" },
+    { src: "/images/Industry insights/3.png", alt: "Industry Image 3" },
   ]
 
   const toggleExpanded = (newsId: string) => {
