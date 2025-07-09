@@ -85,8 +85,8 @@ const Contact: React.FC = () => {
       title: "Email Us",
       main: "hello@amyres.com",
       sub: "We respond within 24 hours",
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
       href: "mailto:hello@amyres.com",
     },
     {
@@ -94,8 +94,8 @@ const Contact: React.FC = () => {
       title: "Visit Us",
       main: "Nyeri, Central Kenya",
       sub: "By appointment only",
-      color: "text-emerald-600",
-      bgColor: "bg-emerald-50",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
       href: "https://maps.google.com/?q=Nyeri,Kenya",
     },
   ]
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
     {
       name: "Instagram",
       icon: "fab fa-instagram",
-      color: "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
+      color: "bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600",
       handle: "@amyresagtech",
       href: "https://instagram.com/amyresagtech",
     },
@@ -139,29 +139,43 @@ const Contact: React.FC = () => {
   ]
 
   return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Background decorations */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/4 w-60 h-60 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
-        </div>
+      <div className="min-h-screen">
+        {/* Hero Section - Organic Blob Background */}
+        <section className="relative py-12 md:py-16 bg-gradient-to-br from-blue-600 to-emerald-600 overflow-hidden">
+          {/* Organic Blob Background */}
+          <div className="absolute inset-0">
+            {/* Large organic blobs */}
+            <div className="absolute top-8 left-8 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute top-16 right-12 w-24 h-40 bg-emerald-300/20 rounded-full blur-xl transform rotate-45"></div>
+            <div className="absolute bottom-12 left-16 w-40 h-24 bg-blue-300/15 rounded-full blur-lg transform -rotate-12"></div>
+            <div className="absolute bottom-8 right-20 w-28 h-28 bg-white/15 rounded-full blur-xl animate-pulse"></div>
 
-        {/* Hero */}
-        <section className="pt-20 pb-16 relative z-10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
-              Get in Touch
-            </h1>
-            <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              Ready to take your agricultural business to the next level? Our experts are ready to provide you with
-              personalized consulting and research-backed strategies.
-            </p>
+            {/* Medium organic shapes */}
+            <div className="absolute top-20 left-1/3 w-16 h-20 bg-emerald-400/25 rounded-full blur-md transform rotate-12"></div>
+            <div className="absolute bottom-20 right-1/4 w-20 h-16 bg-blue-400/20 rounded-full blur-sm transform -rotate-45"></div>
+
+            {/* Small floating elements */}
+            <div className="absolute top-12 right-1/3 w-8 h-8 bg-white/30 rounded-full animate-bounce"></div>
+            <div className="absolute bottom-16 left-1/4 w-6 h-6 bg-emerald-300/40 rounded-full"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-4xl mx-auto space-y-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">Get in Touch</h1>
+              <p className="text-lg text-white/90">"We don't just deliver AgTech, we build it with you, for you"</p>
+            </div>
           </div>
         </section>
 
+        {/* Background decorations */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-emerald-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/4 w-60 h-60 bg-gradient-to-br from-blue-400/10 to-emerald-400/10 rounded-full blur-3xl"></div>
+        </div>
+
         {/* Contact Form */}
-        <section className="py-16 relative z-10">
+        <section className="py-16 relative z-10 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -259,7 +273,7 @@ const Contact: React.FC = () => {
                       <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                          className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       >
                         {isSubmitting ? (
                             <>
@@ -277,7 +291,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   {/* Contact Info Section */}
-                  <div className="bg-gradient-to-br from-blue-600 to-purple-700 p-8 lg:p-12 text-white">
+                  <div className="bg-gradient-to-br from-blue-600 to-emerald-700 p-8 lg:p-12 text-white">
                     <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
                     <p className="text-blue-100 mb-8">
                       Get in touch with us through any of these channels. We're here to help you grow your agricultural
@@ -311,11 +325,11 @@ const Contact: React.FC = () => {
           </div>
         </section>
 
-        {/* Social Media Section - Improved Design */}
-        <section className="py-16 relative z-10">
+        {/* Social Media Section */}
+        <section className="py-16 relative z-10 bg-gradient-to-br from-slate-100 to-blue-100">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
                 Connect With Us
               </h2>
               <p className="text-lg text-slate-600 mb-12">
@@ -349,7 +363,7 @@ const Contact: React.FC = () => {
         <section className="py-16 bg-white/50 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
                 What Our Clients Say
               </h2>
 

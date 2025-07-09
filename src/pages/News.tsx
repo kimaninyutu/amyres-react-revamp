@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import Carousel from "../components/Carousel.tsx"
+import Carousel from "../components/Carousel"
 
 const News: React.FC = () => {
   const [expandedNews, setExpandedNews] = useState<string | null>(null)
@@ -31,22 +31,43 @@ const News: React.FC = () => {
   }
 
   return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section - Consistent with other pages */}
-        <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 pt-20 pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
+      <div className="min-h-screen">
+        {/* Hero Section - Dot Matrix Background */}
+        <section className="relative py-12 md:py-16 bg-gradient-to-br from-emerald-500 to-blue-500 overflow-hidden">
+          {/* Dot Matrix Background */}
+          <div className="absolute inset-0">
+            {/* Dot pattern */}
+            <div className="absolute inset-0 opacity-20">
+              <div
+                  className="w-full h-full"
+                  style={{
+                    backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 1px, transparent 0)`,
+                    backgroundSize: "24px 24px",
+                  }}
+              ></div>
+            </div>
+
+            {/* Larger accent dots */}
+            <div className="absolute top-12 left-16 w-6 h-6 bg-white/30 rounded-full animate-pulse"></div>
+            <div className="absolute top-8 right-20 w-4 h-4 bg-emerald-300/40 rounded-full"></div>
+            <div className="absolute bottom-16 left-24 w-8 h-8 bg-blue-300/25 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-8 right-16 w-5 h-5 bg-white/35 rounded-full"></div>
+
+            {/* Connecting lines */}
+            <div className="absolute top-16 left-20 w-16 h-0.5 bg-white/20 rotate-45"></div>
+            <div className="absolute bottom-20 right-24 w-12 h-0.5 bg-emerald-300/30 -rotate-45"></div>
+          </div>
+
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">News & Updates</h1>
-              <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
-                "We don't just deliver AgTech, we build it with you, for you"
-              </p>
+            <div className="text-center max-w-4xl mx-auto space-y-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">News & Updates</h1>
+              <p className="text-lg text-white/90">"We don't just deliver AgTech, we build it with you, for you"</p>
             </div>
           </div>
         </section>
 
         {/* Featured Discovery Call Announcement */}
-        <article className="py-12 md:py-20 relative">
+        <article className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-12 lg:p-16 max-w-7xl mx-auto">
               <div className="mb-8 relative">
@@ -177,7 +198,7 @@ const News: React.FC = () => {
         </article>
 
         {/* Featured Service */}
-        <article className="py-12 md:py-16">
+        <article className="py-12 md:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="mb-8">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">

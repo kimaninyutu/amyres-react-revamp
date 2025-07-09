@@ -17,7 +17,7 @@ const AnnouncementBar: React.FC = () => {
             {/* Mobile: Single line with left-to-right animation and direct link */}
             <div className="block sm:hidden py-2 px-4 relative overflow-hidden">
                 <a
-                    href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                    href="https://calendly.com/aoko-amyres/discovery-session"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block relative"

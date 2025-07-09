@@ -2,10 +2,10 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import AnnouncementBar from "./AnnouncementBar.tsx"
-import Logo from "./Logo.tsx"
-import DesktopNavigation from "./DesktopNavigation.tsx"
-import MobileNavigation from "./MobileNavigation.tsx"
+import AnnouncementBar from "./AnnouncementBar"
+import Logo from "./Logo"
+import DesktopNavigation from "./DesktopNavigation"
+import MobileNavigation from "./MobileNavigation"
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
 
         {/* Main Header */}
         <header
-            className={`transition-all duration-500 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 ${
+            className={`transition-all duration-500 bg-gradient-to-r from-blue-600 to-emerald-600 ${
                 isScrolled ? "py-2 shadow-lg backdrop-blur-md bg-opacity-95" : "py-3 md:py-4"
             }`}
         >

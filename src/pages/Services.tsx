@@ -10,8 +10,8 @@ const Services: React.FC = () => {
       description:
           "With a specialized approach in agricultural data, AMYRES AgTech provides robust data analysis to guide informed decisions. Our team leverages advanced tools to transform raw data into actionable insights.",
       values: ["Data driven decision making", "Improved Efficiency", "Predictive insights"],
-      gradient: "from-purple-500 to-indigo-600",
-      bgGradient: "from-purple-500/10 to-indigo-500/10",
+      gradient: "from-blue-500 to-emerald-600",
+      bgGradient: "from-blue-500/10 to-emerald-500/10",
     },
     {
       id: "software-development",
@@ -20,9 +20,14 @@ const Services: React.FC = () => {
       quote: "Bring your software to life with expert development and testing services.",
       description:
           "From idea to reality, we help you create reliable and effective agricultural software's. Our services include both software testing and development, ensuring high-quality solutions that meet user needs.",
-      values: ["User centric solutions", "Reduced software-development time", "Innovative features", "Quality assurance"],
-      gradient: "from-blue-500 to-emerald-600",
-      bgGradient: "from-blue-500/10 to-emerald-500/10",
+      values: [
+        "User centric solutions",
+        "Reduced software-development time",
+        "Innovative features",
+        "Quality assurance",
+      ],
+      gradient: "from-emerald-500 to-blue-600",
+      bgGradient: "from-emerald-500/10 to-blue-500/10",
     },
     {
       id: "field-trials",
@@ -37,8 +42,8 @@ const Services: React.FC = () => {
         "Contextualized experimental sites",
         "Participatory research",
       ],
-      gradient: "from-blue-500 to-cyan-600",
-      bgGradient: "from-blue-500/10 to-cyan-500/10",
+      gradient: "from-blue-500 to-emerald-600",
+      bgGradient: "from-blue-500/10 to-emerald-500/10",
     },
     {
       id: "market-research",
@@ -47,8 +52,8 @@ const Services: React.FC = () => {
       description:
           "Gain a deep understanding of market demands and trends with our tailored market research services. From customer insights to competitive analysis, we equip you with essential knowledge.",
       values: ["Informed business strategy", "Risk mitigation", "Business growth", "Enhanced customer profiles"],
-      gradient: "from-emerald-500 to-green-600",
-      bgGradient: "from-emerald-500/10 to-green-500/10",
+      gradient: "from-emerald-500 to-blue-600",
+      bgGradient: "from-emerald-500/10 to-blue-500/10",
     },
     {
       id: "training-assessment",
@@ -64,8 +69,8 @@ const Services: React.FC = () => {
         "Comprehensive training reports",
         "Market led training programs",
       ],
-      gradient: "from-emerald-500 to-cyan-600",
-      bgGradient: "from-emerald-500/10 to-cyan-500/10",
+      gradient: "from-blue-500 to-emerald-600",
+      bgGradient: "from-blue-500/10 to-emerald-500/10",
     },
     {
       id: "consultancy",
@@ -80,8 +85,8 @@ const Services: React.FC = () => {
         "Policy and strategy development",
         "Analysis reports",
       ],
-      gradient: "from-cyan-500 to-emerald-600",
-      bgGradient: "from-cyan-500/10 to-emerald-500/10",
+      gradient: "from-emerald-500 to-blue-600",
+      bgGradient: "from-emerald-500/10 to-blue-500/10",
     },
   ]
 
@@ -90,39 +95,60 @@ const Services: React.FC = () => {
       question: "What types of field trials do you offer?",
       answer:
           "We offer various field trials tailored to client needs, including cultivar trials, efficacy trials, technology adoption trials, and pest management studies.",
-      bgGradient: "from-blue-500/5 to-cyan-500/5",
+      bgGradient: "from-blue-500/5 to-emerald-500/5",
     },
     {
       question: "How does AMYRES AgTech handle data confidentiality in Agri-Data Analysis?",
       answer:
           "We follow strict data security protocols and ensure that client data remains confidential throughout our analysis process.",
-      bgGradient: "from-emerald-500/5 to-green-500/5",
+      bgGradient: "from-emerald-500/5 to-blue-500/5",
     },
     {
       question: "Can AMYRES AgTech provide customized market research?",
       answer:
           "Yes, we offer tailored market research services to meet the specific needs of our clients, including competitor analysis, consumer insights, and market trend forecasting.",
-      bgGradient: "from-purple-500/5 to-indigo-500/5",
+      bgGradient: "from-blue-500/5 to-emerald-500/5",
     },
   ]
 
   return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section - Consistent styling */}
-        <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 pt-20 pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
+      <div className="min-h-screen">
+        {/* Hero Section - Wave Pattern Background */}
+        <section className="relative py-12 md:py-16 bg-gradient-to-br from-emerald-600 to-blue-600 overflow-hidden">
+          {/* Wave Pattern Background */}
+          <div className="absolute inset-0">
+            {/* Animated wave shapes */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <svg className="absolute top-4 left-8 w-16 h-16 text-white/10" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="currentColor" />
+              </svg>
+              <svg className="absolute top-12 right-12 w-24 h-24 text-emerald-300/20" viewBox="0 0 100 100">
+                <polygon points="50,10 90,90 10,90" fill="currentColor" />
+              </svg>
+              <svg className="absolute bottom-8 left-16 w-20 h-20 text-blue-300/15" viewBox="0 0 100 100">
+                <rect x="20" y="20" width="60" height="60" rx="10" fill="currentColor" transform="rotate(45 50 50)" />
+              </svg>
+              <svg className="absolute bottom-16 right-20 w-18 h-18 text-white/20" viewBox="0 0 100 100">
+                <ellipse cx="50" cy="50" rx="40" ry="25" fill="currentColor" />
+              </svg>
+            </div>
+
+            {/* Floating dots */}
+            <div className="absolute top-20 left-1/4 w-3 h-3 bg-white/30 rounded-full animate-pulse"></div>
+            <div className="absolute top-8 right-1/3 w-2 h-2 bg-emerald-300/40 rounded-full"></div>
+            <div className="absolute bottom-12 left-1/2 w-4 h-4 bg-blue-300/25 rounded-full animate-pulse"></div>
+          </div>
+
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">Our Services</h1>
-              <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
-                "We don't just deliver AgTech, we build it with you, for you"
-              </p>
+            <div className="text-center max-w-4xl mx-auto space-y-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">Our Services</h1>
+              <p className="text-lg text-white/90">"We don't just deliver AgTech, we build it with you, for you"</p>
             </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">

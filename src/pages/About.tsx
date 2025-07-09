@@ -2,16 +2,30 @@ import type React from "react"
 
 const About: React.FC = () => {
   return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section - Consistent styling */}
-        <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 pt-20 pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
+      <div className="min-h-screen">
+        {/* Hero Section - Unique Geometric Background */}
+        <section className="relative py-12 md:py-16 bg-gradient-to-br from-blue-600 to-emerald-600 overflow-hidden">
+          {/* Geometric Background Elements */}
+          <div className="absolute inset-0">
+            {/* Floating circles */}
+            <div className="absolute top-8 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+            <div className="absolute top-16 right-16 w-32 h-32 bg-emerald-400/20 rounded-full blur-sm"></div>
+            <div className="absolute bottom-12 left-1/4 w-16 h-16 bg-blue-400/30 rounded-full"></div>
+            <div className="absolute bottom-8 right-12 w-24 h-24 bg-white/15 rounded-full blur-lg"></div>
+
+            {/* Geometric shapes */}
+            <div className="absolute top-12 left-1/3 w-12 h-12 bg-emerald-300/20 rotate-45 rounded-lg"></div>
+            <div className="absolute bottom-16 right-1/3 w-16 h-16 bg-blue-300/25 rotate-12 rounded-lg blur-sm"></div>
+
+            {/* Hexagonal pattern */}
+            <div className="absolute top-20 right-1/4 w-14 h-14 bg-white/10 clip-hexagon"></div>
+            <div className="absolute bottom-20 left-1/2 w-10 h-10 bg-emerald-400/20 clip-hexagon rotate-30"></div>
+          </div>
+
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">About AMYRES AGTECH</h1>
-              <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
-                "We don't just deliver AgTech, we build it with you, for you"
-              </p>
+            <div className="text-center max-w-4xl mx-auto space-y-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">About AMYRES AGTECH</h1>
+              <p className="text-lg text-white/90">"We don't just deliver AgTech, we build it with you, for you"</p>
             </div>
           </div>
         </section>
@@ -86,7 +100,7 @@ const About: React.FC = () => {
               </h2>
             </div>
             <div className="bg-white rounded-3xl p-8 md:p-12 text-center shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 max-w-4xl mx-auto">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <i className="fas fa-rocket text-white text-2xl md:text-3xl"></i>
               </div>
               <p className="text-slate-700 leading-relaxed text-lg md:text-xl">
@@ -107,10 +121,9 @@ const About: React.FC = () => {
               </h2>
             </div>
             <div className="space-y-8 md:space-y-12 max-w-6xl mx-auto">
-
               {/* Tech Development */}
               <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <i className="fas fa-laptop-code text-white text-xl md:text-2xl"></i>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-6">Software Development</h3>
@@ -125,7 +138,7 @@ const About: React.FC = () => {
                     Through these solutions, we aim to modernize farming practices, enhance productivity, and make
                     data-driven agriculture accessible and actionable for farmers at every scale.
                   </p>
-                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 md:p-6 mt-6">
+                  <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-2xl p-4 md:p-6 mt-6">
                     <h4 className="text-base md:text-lg font-semibold text-slate-800 mb-3">Our Digital Product Suite:</h4>
                     <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
                       <li>
@@ -155,7 +168,7 @@ const About: React.FC = () => {
 
               {/* Agri-Data Management */}
               <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                   <i className="fas fa-database text-white text-xl md:text-2xl"></i>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-6">Agri-Data Management</h3>
@@ -172,7 +185,7 @@ const About: React.FC = () => {
                     advanced data analytics and machine learning to generate actionable insights for smarter
                     decision-making across the agricultural ecosystem.
                   </p>
-                  <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-4 md:p-6 mt-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl p-4 md:p-6 mt-6">
                     <h4 className="text-base md:text-lg font-semibold text-slate-800 mb-3">Key Offerings:</h4>
                     <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
                       <li>
@@ -202,7 +215,7 @@ const About: React.FC = () => {
 
               {/* Research and Innovation */}
               <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <i className="fas fa-microscope text-white text-xl md:text-2xl"></i>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-6">Research and Innovation</h3>
@@ -219,7 +232,7 @@ const About: React.FC = () => {
                     with farmers, agribusinesses, and stakeholders to ensure that our findings are actionable and
                     context-specific.
                   </p>
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-4 md:p-6 mt-6">
+                  <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-2xl p-4 md:p-6 mt-6">
                     <h4 className="text-base md:text-lg font-semibold text-slate-800 mb-3">Our Research Services:</h4>
                     <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
                       <li>Field trial design and management</li>

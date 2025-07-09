@@ -13,7 +13,6 @@ const Home: React.FC = () => {
                   Join us for a <strong>Complimentary Discovery Call</strong> and discover how AMYRES AGTECH can
                   revolutionize your farming practices with cutting-edge research and innovative solutions.
                 </p>
-
                 <div className="space-y-6">
                   <h3 className="heading-md">What You'll Get:</h3>
                   <ul className="space-y-3 text-body">
@@ -39,10 +38,9 @@ const Home: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-
                 <div className="space-y-4">
                   <a
-                      href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                      href="https://calendly.com/aoko-amyres/discovery-session"
                       className="btn-modern btn-primary inline-flex items-center space-x-2"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -53,7 +51,6 @@ const Home: React.FC = () => {
                   <p className="text-sm text-slate-600">Limited slots available - Book today!</p>
                 </div>
               </div>
-
               <div className="lg:order-first">
                 <div className="glass-amyres rounded-3xl p-4 lg:p-6">
                   <div className="rounded-2xl overflow-hidden w-full h-64 sm:h-80 lg:h-96 xl:h-[28rem]">
@@ -102,7 +99,6 @@ const Home: React.FC = () => {
                 technology and data-driven insights.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="glass-amyres rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500">
                 <div className="w-16 h-16 bg-gradient-to-br from-amyres-blue/20 to-amyres-green/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -114,7 +110,6 @@ const Home: React.FC = () => {
                   farming challenges.
                 </p>
               </div>
-
               <div className="glass-amyres rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500">
                 <div className="w-16 h-16 bg-gradient-to-br from-amyres-green/20 to-amyres-teal/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-laptop-code text-amyres-green text-2xl"></i>
@@ -125,7 +120,6 @@ const Home: React.FC = () => {
                   agricultural needs.
                 </p>
               </div>
-
               <div className="glass-amyres rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-500">
                 <div className="w-16 h-16 bg-gradient-to-br from-amyres-teal/20 to-amyres-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-users text-amyres-teal text-2xl"></i>

@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes scroll-left-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-scroll-left-right {
+    animation: scroll-left-right 15s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom clip path for hexagon */
+.clip-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* AMYRES AGTECH Design System */
+
+/* Color Variables */
+:root {
+    --amyres-blue: #2563eb;
+    --amyres-green: #059669;
+    --amyres-teal: #0d9488;
+    --amyres-slate: #475569;
+}
+
+/* Background Classes */
+.bg-alternating-1 {
+    background-color: #ffffff;
+}
+
+.bg-alternating-2 {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.bg-alternating-3 {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+/* Layout Classes */
+.section-padding {
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .section-padding {
+        padding: 6rem 0;
+    }
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .section-container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Typography Classes */
+.heading-xl {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .heading-xl {
+        font-size: 3.75rem;
+    }
+}
+
+.heading-lg {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .heading-lg {
+        font-size: 3rem;
+    }
+}
+
+.heading-md {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .heading-md {
+        font-size: 1.5rem;
+    }
+}
+
+.text-body {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--amyres-blue) 0%, var(--amyres-green) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Color Classes */
+.text-amyres-blue {
+    color: var(--amyres-blue);
+}
+
+.text-amyres-green {
+    color: var(--amyres-green);
+}
+
+.text-amyres-teal {
+    color: var(--amyres-teal);
+}
+
+/* Button Classes */
+.btn-modern {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+@media (min-width: 768px) {
+    .btn-modern {
+        padding: 1rem 2rem;
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--amyres-blue) 0%, var(--amyres-green) 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+    border-color: var(--amyres-blue);
+    color: var(--amyres-blue);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--amyres-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Glass Effect */
+.glass-amyres {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}

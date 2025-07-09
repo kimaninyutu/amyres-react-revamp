@@ -21,22 +21,41 @@ const Products: React.FC = () => {
   }, [productImages.length])
 
   return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section - Consistent styling */}
-        <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 pt-20 pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
+      <div className="min-h-screen">
+        {/* Hero Section - Grid Pattern Background */}
+        <section className="relative py-12 md:py-16 bg-gradient-to-br from-blue-500 to-emerald-500 overflow-hidden">
+          {/* Grid Pattern Background */}
+          <div className="absolute inset-0">
+            {/* Grid lines */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="grid grid-cols-8 grid-rows-6 h-full w-full gap-4">
+                {Array.from({ length: 48 }).map((_, i) => (
+                    <div key={i} className="border border-white/20 rounded-lg"></div>
+                ))}
+              </div>
+            </div>
+
+            {/* Floating geometric elements */}
+            <div className="absolute top-8 left-12 w-8 h-8 bg-white/20 rounded-full animate-bounce"></div>
+            <div className="absolute top-16 right-16 w-12 h-12 bg-emerald-300/30 rotate-45 rounded-lg"></div>
+            <div className="absolute bottom-12 left-20 w-6 h-6 bg-blue-300/40 rounded-full"></div>
+            <div className="absolute bottom-8 right-12 w-10 h-10 bg-white/15 rotate-12 rounded-lg animate-pulse"></div>
+
+            {/* Diamond shapes */}
+            <div className="absolute top-20 left-1/3 w-4 h-4 bg-emerald-400/25 rotate-45"></div>
+            <div className="absolute bottom-16 right-1/4 w-6 h-6 bg-blue-400/20 rotate-45 rounded-sm"></div>
+          </div>
+
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">Our Products</h1>
-              <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
-                "We don't just deliver AgTech, we build it with you, for you"
-              </p>
+            <div className="text-center max-w-4xl mx-auto space-y-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">Our Products</h1>
+              <p className="text-lg text-white/90">"We don't just deliver AgTech, we build it with you, for you"</p>
             </div>
           </div>
         </section>
 
         {/* Products in Development Section */}
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
@@ -87,7 +106,7 @@ const Products: React.FC = () => {
 
               {/* Auditass - Coming Soon */}
               <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-dashed border-blue-300">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-clipboard-check text-blue-600 text-2xl md:text-3xl"></i>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-blue-600 mb-4 text-center">Auditass</h3>
@@ -96,7 +115,7 @@ const Products: React.FC = () => {
                   and compliance.
                 </p>
                 <div className="mb-6">
-                <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-medium inline-block mb-4">
+                <span className="bg-gradient-to-r from-blue-500 to-emerald-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-medium inline-block mb-4">
                   🔬 In Development
                 </span>
                   <div className="text-left space-y-2 max-w-sm mx-auto">
