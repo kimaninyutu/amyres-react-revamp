@@ -34,7 +34,7 @@ const Home: React.FC = () => {
                     </li>
                     <li className="flex items-start space-x-3">
                       <span className="text-amyres-green text-xl">✅</span>
-                      <span>No obligation - completely FREE consultation</span>
+                      <span>No obligation - consultation</span>
                     </li>
                   </ul>
                 </div>

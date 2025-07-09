@@ -58,9 +58,35 @@ const Contact: React.FC = () => {
     setIsSubmitting(true)
     setSubmitStatus("idle")
 
-    // Simulate form submission
     try {
+      // Prepare email data for hello@amyres.com
+      const emailData = {
+        to: "hello@amyres.com",
+        subject: `Contact Form: ${formData.subject}`,
+        body: `
+        New Contact Form Submission:
+        
+        Subject: ${formData.subject}
+        
+        Contact Information:
+        - Name: ${formData.name}
+        - Email: ${formData.email}
+        
+        Message:
+        ${formData.message}
+        
+        Submitted on: ${new Date().toLocaleString()}
+        
+        ---
+        This message was sent from the AMYRES AGTECH website contact form.
+      `,
+      }
+
+      // Simulate email sending (replace with actual email service)
       await new Promise((resolve) => setTimeout(resolve, 2000))
+
+      console.log("Contact email would be sent:", emailData)
+
       setSubmitStatus("success")
       setFormData({ name: "", email: "", subject: "", message: "" })
     } catch (error) {

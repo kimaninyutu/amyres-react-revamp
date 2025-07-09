@@ -1,6 +1,22 @@
+"use client"
+
 import type React from "react"
+import { useState } from "react"
+import { X, User, Mail, Phone, MessageSquare, Send, CheckCircle } from "lucide-react"
 
 const Services: React.FC = () => {
+  const [showModal, setShowModal] = useState(false)
+  const [selectedService, setSelectedService] = useState<string>("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+  })
+
   const services = [
     {
       id: "agri-data-management",
@@ -111,6 +127,79 @@ const Services: React.FC = () => {
     },
   ]
 
+  const handleRequestService = (serviceTitle: string) => {
+    setSelectedService(serviceTitle)
+    setShowModal(true)
+    setSubmitStatus("idle")
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false)
+    setSelectedService("")
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+    })
+    setSubmitStatus("idle")
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      // Simulate API call to send email
+      const emailData = {
+        to: "hello@amyres.com",
+        subject: `Service Request: ${selectedService}`,
+        body: `
+          New Service Request Received:
+          
+          Service: ${selectedService}
+          
+          Client Information:
+          - Name: ${formData.name}
+          - Email: ${formData.email}
+          - Phone: ${formData.phone}
+          - Company: ${formData.company || "Not provided"}
+          
+          Message:
+          ${formData.message}
+          
+          Submitted on: ${new Date().toLocaleString()}
+        `,
+      }
+
+      // Simulate email sending (replace with actual email service)
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+
+      console.log("Email would be sent:", emailData)
+
+      setSubmitStatus("success")
+
+      // Auto-close modal after success
+      setTimeout(() => {
+        handleCloseModal()
+      }, 3000)
+    } catch (error) {
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
       <div className="min-h-screen">
         {/* Hero Section - Wave Pattern Background */}
@@ -191,6 +280,7 @@ const Services: React.FC = () => {
                       </ul>
                     </div>
                     <button
+                        onClick={() => handleRequestService(service.title)}
                         className={`bg-gradient-to-r ${service.gradient} hover:shadow-lg text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm md:text-base`}
                     >
                       Request Service
@@ -219,6 +309,181 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Service Request Modal */}
+        {showModal && (
+            <div className="fixed inset-0 z-50 overflow-y-auto">
+              {/* Backdrop */}
+              <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={handleCloseModal}></div>
+
+              {/* Modal */}
+              <div className="flex min-h-full items-center justify-center p-4">
+                <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                  {/* Header */}
+                  <div className="sticky top-0 bg-white rounded-t-3xl border-b border-slate-200 p-6 flex items-center justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-800">Request Service</h3>
+                      <p className="text-slate-600 mt-1">
+                        Service: <span className="font-semibold text-blue-600">{selectedService}</span>
+                      </p>
+                    </div>
+                    <button
+                        onClick={handleCloseModal}
+                        className="p-2 hover:bg-slate-100 rounded-full transition-colors duration-200"
+                    >
+                      <X className="w-6 h-6 text-slate-600" />
+                    </button>
+                  </div>
+
+                  {/* Form */}
+                  <div className="p-6">
+                    {submitStatus === "success" && (
+                        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
+                          <CheckCircle className="w-5 h-5 text-green-600" />
+                          <div>
+                            <p className="text-green-800 font-semibold">Request Sent Successfully!</p>
+                            <p className="text-green-700 text-sm">We'll get back to you within 24 hours.</p>
+                          </div>
+                        </div>
+                    )}
+
+                    {submitStatus === "error" && (
+                        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                          <p className="text-red-800">Something went wrong. Please try again.</p>
+                        </div>
+                    )}
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                            Full Name *
+                          </label>
+                          <div className="relative">
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                required
+                                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                placeholder="Your full name"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                            Email Address *
+                          </label>
+                          <div className="relative">
+                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                placeholder="your.email@example.com"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                            Phone Number *
+                          </label>
+                          <div className="relative">
+                            <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleInputChange}
+                                required
+                                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                placeholder="+254 XXX XXX XXX"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+                            Company/Organization
+                          </label>
+                          <input
+                              type="text"
+                              id="company"
+                              name="company"
+                              value={formData.company}
+                              onChange={handleInputChange}
+                              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                              placeholder="Your company name (optional)"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                          Project Details & Requirements *
+                        </label>
+                        <div className="relative">
+                          <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                          <textarea
+                              id="message"
+                              name="message"
+                              value={formData.message}
+                              onChange={handleInputChange}
+                              required
+                              rows={5}
+                              className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                              placeholder="Please describe your project requirements, timeline, budget expectations, and any specific needs..."
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                        <button
+                            type="button"
+                            onClick={handleCloseModal}
+                            className="flex-1 px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors duration-200 font-semibold"
+                        >
+                          Cancel
+                        </button>
+                        <button
+                            type="submit"
+                            disabled={isSubmitting || submitStatus === "success"}
+                            className="flex-1 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                        >
+                          {isSubmitting ? (
+                              <>
+                                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                                Sending Request...
+                              </>
+                          ) : submitStatus === "success" ? (
+                              <>
+                                <CheckCircle className="w-5 h-5" />
+                                Request Sent!
+                              </>
+                          ) : (
+                              <>
+                                <Send className="w-5 h-5" />
+                                Send Request
+                              </>
+                          )}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        )}
       </div>
   )
 }
