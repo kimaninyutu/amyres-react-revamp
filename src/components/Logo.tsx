@@ -10,7 +10,7 @@ const Logo: React.FC<LogoProps> = ({ isScrolled }) => {
         <Link href="/" className="flex items-center space-x-2 md:space-x-4 group">
             <div className="relative flex-shrink-0">
                 <img
-                    src="/placeholder.svg?height=80&width=80"
+                    src="/lovable-uploads/8043aac1-4f1b-4583-9dc8-7bbcdfbab1b4.png"
                     alt="AMYRES AGTECH Logo"
                     className={`rounded-full object-cover transition-all duration-300 group-hover:scale-110 shadow-lg aspect-square ${
                         isScrolled ? "w-12 h-12 md:w-16 md:h-16" : "w-14 h-14 md:w-20 md:h-20"

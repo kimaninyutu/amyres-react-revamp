@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { X, User, Mail, Phone, MessageSquare, Send, CheckCircle } from "lucide-react"
 
 const Services: React.FC = () => {
@@ -16,6 +16,24 @@ const Services: React.FC = () => {
     company: "",
     message: "",
   })
+
+  // Initialize EmailJS
+  useEffect(() => {
+    // Load EmailJS script
+    const script = document.createElement("script")
+    script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    script.onload = () => {
+      // Initialize EmailJS with your correct user ID from playground
+      if (window.emailjs) {
+        window.emailjs.init("KbPaGlf_jEQCl1fOD")
+      }
+    }
+    document.head.appendChild(script)
+
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
 
   const services = [
     {
@@ -160,33 +178,22 @@ const Services: React.FC = () => {
     setSubmitStatus("idle")
 
     try {
-      // Simulate API call to send email
-      const emailData = {
-        to: "hello@amyres.com",
-        subject: `Service Request: ${selectedService}`,
-        body: `
-          New Service Request Received:
-          
-          Service: ${selectedService}
-          
-          Client Information:
-          - Name: ${formData.name}
-          - Email: ${formData.email}
-          - Phone: ${formData.phone}
-          - Company: ${formData.company || "Not provided"}
-          
-          Message:
-          ${formData.message}
-          
-          Submitted on: ${new Date().toLocaleString()}
-        `,
+      // Check if EmailJS is loaded
+      if (!window.emailjs) {
+        throw new Error("EmailJS not loaded")
       }
 
-      // Simulate email sending (replace with actual email service)
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Create a FormData object from the form
+      const form = e.target as HTMLFormElement
 
-      console.log("Email would be sent:", emailData)
+      // Send email using EmailJS sendForm (same as playground)
+      const result = await window.emailjs.sendForm(
+          "default_service", // Your service ID
+          "template_9l5i5gx", // Your new service request template ID
+          form,
+      )
 
+      console.log("Email sent successfully:", result)
       setSubmitStatus("success")
 
       // Auto-close modal after success
@@ -194,6 +201,7 @@ const Services: React.FC = () => {
         handleCloseModal()
       }, 3000)
     } catch (error) {
+      console.error("Email sending failed:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -349,11 +357,16 @@ const Services: React.FC = () => {
 
                     {submitStatus === "error" && (
                         <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                          <p className="text-red-800">Something went wrong. Please try again.</p>
+                          <p className="text-red-800">
+                            Something went wrong. Please try again or contact us directly at amyresagtech@gmail.com
+                          </p>
                         </div>
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Hidden fields for service request template */}
+                      <input type="hidden" name="title" value={selectedService} />
+                      <input type="hidden" name="time" value={new Date().toLocaleString()} />
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
@@ -486,6 +499,13 @@ const Services: React.FC = () => {
         )}
       </div>
   )
+}
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    emailjs: any
+  }
 }
 
 export default Services

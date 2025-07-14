@@ -9,11 +9,29 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    title: "",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+
+  // Initialize EmailJS
+  useEffect(() => {
+    // Load EmailJS script
+    const script = document.createElement("script")
+    script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    script.onload = () => {
+      // Initialize EmailJS with your correct user ID from playground
+      if (window.emailjs) {
+        window.emailjs.init("KbPaGlf_jEQCl1fOD")
+      }
+    }
+    document.head.appendChild(script)
+
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
 
   const testimonials = [
     {
@@ -59,37 +77,26 @@ const Contact: React.FC = () => {
     setSubmitStatus("idle")
 
     try {
-      // Prepare email data for hello@amyres.com
-      const emailData = {
-        to: "hello@amyres.com",
-        subject: `Contact Form: ${formData.subject}`,
-        body: `
-        New Contact Form Submission:
-        
-        Subject: ${formData.subject}
-        
-        Contact Information:
-        - Name: ${formData.name}
-        - Email: ${formData.email}
-        
-        Message:
-        ${formData.message}
-        
-        Submitted on: ${new Date().toLocaleString()}
-        
-        ---
-        This message was sent from the AMYRES AGTECH website contact form.
-      `,
+      // Check if EmailJS is loaded
+      if (!window.emailjs) {
+        throw new Error("EmailJS not loaded")
       }
 
-      // Simulate email sending (replace with actual email service)
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Create a FormData object from the form
+      const form = e.target as HTMLFormElement
 
-      console.log("Contact email would be sent:", emailData)
+      // Send email using EmailJS sendForm (same as playground)
+      const result = await window.emailjs.sendForm(
+          "default_service", // Your service ID
+          "template_wjfeome", // Your template ID (corrected)
+          form,
+      )
 
+      console.log("Email sent successfully:", result)
       setSubmitStatus("success")
-      setFormData({ name: "", email: "", subject: "", message: "" })
+      setFormData({ name: "", email: "", title: "", message: "" })
     } catch (error) {
+      console.error("Email sending failed:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -109,11 +116,11 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      main: "hello@amyres.com",
+      main: "amyresagtech@gmail.com",
       sub: "We respond within 24 hours",
       color: "text-emerald-600",
       bgColor: "bg-emerald-50",
-      href: "mailto:hello@amyres.com",
+      href: "mailto:amyresagtech@gmail.com",
     },
     {
       icon: MapPin,
@@ -221,6 +228,14 @@ const Contact: React.FC = () => {
                         </div>
                     )}
 
+                    {submitStatus === "error" && (
+                        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                          <p className="text-red-800">
+                            Something went wrong. Please try again or contact us directly at amyresagtech@gmail.com
+                          </p>
+                        </div>
+                    )}
+
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
@@ -262,14 +277,14 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
+                        <label htmlFor="title" className="block text-sm font-medium text-slate-700 mb-2">
                           Subject *
                         </label>
                         <input
                             type="text"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
+                            id="title"
+                            name="title"
+                            value={formData.title}
                             onChange={handleInputChange}
                             required
                             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -452,6 +467,13 @@ const Contact: React.FC = () => {
         </section>
       </div>
   )
+}
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    emailjs: any
+  }
 }
 
 export default Contact
