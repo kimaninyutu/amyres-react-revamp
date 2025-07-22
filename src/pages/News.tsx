@@ -153,7 +153,7 @@ const News: React.FC = () => {
         </article>
 
         {/* Recent Projects */}
-        <article className="py-12 md:py-16 bg-gradient-to-br from-slate-100 to-blue-100">
+        <article id="recent-projects" className="py-12 md:py-16 bg-gradient-to-br from-slate-100 to-blue-100">
           <div className="container mx-auto px-4">
             <div className="mb-8">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
@@ -198,7 +198,7 @@ const News: React.FC = () => {
         </article>
 
         {/* Featured Service */}
-        <article className="py-12 md:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+        <article id="featured-service" className="py-12 md:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="mb-8">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
@@ -239,7 +239,7 @@ const News: React.FC = () => {
         </article>
 
         {/* Industry Insights */}
-        <article className="py-12 md:py-16 bg-gradient-to-br from-slate-100 to-blue-100">
+        <article id="industry-insights" className="py-12 md:py-16 bg-gradient-to-br from-slate-100 to-blue-100">
           <div className="container mx-auto px-4">
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-12 lg:p-16 max-w-6xl mx-auto">
               <div className="mb-8">

@@ -55,7 +55,7 @@ const Products: React.FC = () => {
         </section>
 
         {/* Products in Development Section */}
-        <section className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+        <section id="products-development" className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">

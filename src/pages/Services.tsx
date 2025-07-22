@@ -260,6 +260,7 @@ const Services: React.FC = () => {
               {services.map((service) => (
                   <div
                       key={service.id}
+                      id={service.id}
                       className={`bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br ${service.bgGradient}`}
                   >
                     <div

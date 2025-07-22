@@ -77,7 +77,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isMenuOpen, toggleM
                             className="flex items-center justify-between w-full py-3 px-4 hover:bg-slate-100 rounded-xl transition-colors duration-200 text-slate-700 font-medium"
                         >
                           <div className="flex items-center space-x-3">
-                            <i className="fas fa-info-circle text-purple-600 w-5"></i>
+                            <i className="fas fa-info-circle text-blue-600 w-5"></i>
                             <span>About Us</span>
                           </div>
                           <ChevronRight
@@ -132,14 +132,14 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isMenuOpen, toggleM
                         {expandedSection === "products" && (
                             <div className="ml-8 mt-2 space-y-1">
                               <Link
-                                  href="/products#agrefind"
+                                  href="/products#products-development"
                                   className="block py-2 px-4 text-sm text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors duration-200"
                                   onClick={handleLinkClick}
                               >
                                 AGReFIND
                               </Link>
                               <Link
-                                  href="/products#auditass"
+                                  href="/products#products-development"
                                   className="block py-2 px-4 text-sm text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors duration-200"
                                   onClick={handleLinkClick}
                               >

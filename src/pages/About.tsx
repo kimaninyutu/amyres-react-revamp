@@ -31,7 +31,7 @@ const About: React.FC = () => {
         </section>
 
         {/* Background Section */}
-        <section className="py-12 md:py-20">
+        <section id="background" className="py-12 md:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
@@ -112,7 +112,7 @@ const About: React.FC = () => {
         </section>
 
         {/* What We Do Section */}
-        <section className="py-12 md:py-20">
+        <section id="what-we-do" className="py-12 md:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
@@ -241,6 +241,162 @@ const About: React.FC = () => {
                       <li>Evidence-based recommendations</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section id="team" className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                <i className="fas fa-users text-blue-600"></i>
+                Meet Our Team
+              </h2>
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto">The experts driving agricultural innovation</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
+              {/* Team Member 1 - Aoko Pauline */}
+              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-emerald-100 p-1">
+                    <img
+                        src="public/images/Aoko.jpg"
+                        alt="Aoko Pauline"
+                        className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <div className="flex space-x-3">
+                      <a
+                          href="#"
+                          className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                          aria-label="LinkedIn"
+                      >
+                        <i className="fab fa-linkedin text-sm"></i>
+                      </a>
+                      <a
+                          href="#"
+                          className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors duration-300"
+                          aria-label="Email"
+                      >
+                        <i className="fas fa-envelope text-sm"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3">Aoko Pauline</h3>
+                  <div className="flex flex-wrap justify-center gap-2 mb-4">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    Agriculturalist
+                  </span>
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+                    UI/UX Developer
+                  </span>
+                  </div>
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                    Aoko collaborates with farmers to boost productivity through innovative, sustainable strategies while
+                    minimizing environmental impact. She leverages this expertise to design intuitive digital solutions
+                    that address the unique challenges of targeted audiences, enhancing user engagement.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 2 - Joseph Onyango */}
+              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-emerald-100 to-blue-100 p-1">
+                    <img
+                        src="public/images/Joseph.png"
+                        alt="Joseph Onyango"
+                        className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <div className="flex space-x-3">
+                      <a
+                          href="#"
+                          className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                          aria-label="LinkedIn"
+                      >
+                        <i className="fab fa-linkedin text-sm"></i>
+                      </a>
+                      <a
+                          href="#"
+                          className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors duration-300"
+                          aria-label="Email"
+                      >
+                        <i className="fas fa-envelope text-sm"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3">Joseph Onyango</h3>
+                  <div className="flex flex-wrap justify-center gap-2 mb-4">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+                    Data Scientist
+                  </span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    GIS Specialist
+                  </span>
+                  </div>
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                    With a background in natural resource management, Joseph leads our research data processing,
+                    transforming complex spatial and non-spatial datasets into actionable insights that guide field
+                    applications and resource management decisions.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 3 - Amisi Pascal */}
+              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group md:col-span-2 lg:col-span-1">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-emerald-100 p-1">
+                    <img
+                        src="public/images/Amisi.jpg"
+                        alt="Amisi Pascal"
+                        className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <div className="flex space-x-3">
+                      <a
+                          href="#"
+                          className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                          aria-label="LinkedIn"
+                      >
+                        <i className="fab fa-linkedin text-sm"></i>
+                      </a>
+                      <a
+                          href="#"
+                          className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors duration-300"
+                          aria-label="Email"
+                      >
+                        <i className="fas fa-envelope text-sm"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3">Amisi Pascal</h3>
+                  <div className="flex flex-wrap justify-center gap-2 mb-4">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    Statistical Programmer
+                  </span>
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+                    Biostatistician
+                  </span>
+                  </div>
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                    Amisi oversees our research design and analysis by leveraging his experience in processing complex
+                    data, developing predictive models and identifying patterns to generate actionable industry-insights
+                    through summary statistics, visualizations and comprehensive reports.
+                  </p>
                 </div>
               </div>
             </div>
