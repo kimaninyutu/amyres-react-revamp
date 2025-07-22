@@ -45,24 +45,32 @@ const About: React.FC = () => {
                   <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-4">Our History</h3>
                   <div className="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
                     <p>
-                      Amyres Agtech is an agritech research and innovation organization established in 2023 in response to
-                      the growing need for a dedicated research organization that could{" "}
+                      At Amyres Agtech, we believe the knowledge and innovation to transform agriculture already exists —
+                      in our research institutions, our farms, and our agribusinesses. But without the right bridge, that
+                      knowledge remains untapped.
+                    </p>
+                    <p>
+                      That's why we founded Amyres in 2023 — to close the gap between research, technology, and real-world
+                      agricultural success. We translate scientific research, data, and technology into practical tools
+                      and insights that empower farmers, growers, and agribusinesses to boost productivity, reduce risks,
+                      and unlock new opportunities.
+                    </p>
+                    <p>
+                      Our team blends experts in agricultural science, data science, and software development to deliver
+                      solutions that are innovative, adaptable, and grounded in the realities of Kenyan agriculture.
+                    </p>
+                    <p>
+                      Based in Nyeri — the heart of Kenya's agricultural ecosystem — we work alongside farmers/growers
+                      cooperatives, exporters, input suppliers and other value chain actors to ensure good ideas don't
+                      stay stuck in reports or boardrooms, and that growth turns into real results for those who feed and
+                      fuel our economy.
+                    </p>
+                    <p>
                       <strong className="text-slate-800">
-                        bridge the gap between scientific research and practical, field-based solutions for Kenyan
-                        farmers.
+                        At Amyres Agtech, we don't just innovate — we turn knowledge into action, and potential into
+                        lasting prosperity for Kenya's entire agricultural value chain.
                       </strong>
                     </p>
-                    <p>
-                      The founders, a team of experienced professionals in agricultural science, data science and
-                      statistical programming, recognized that while Kenya had a strong base of agricultural research,
-                      much of the knowledge was not being effectively transferred to farmers or adapted to local contexts.
-                    </p>
-                    <p>
-                      This created an urgent need for an organization that could work directly with farmers/growers and
-                      collaborate with local and international partners to{" "}
-                      <strong className="text-slate-800">translate research findings into actionable insights.</strong>
-                    </p>
-                    <p>We are committed to transforming agriculture through research, data and technology.</p>
                   </div>
                 </div>
               </div>
@@ -264,7 +272,7 @@ const About: React.FC = () => {
                 <div className="relative mb-6">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-emerald-100 p-1">
                     <img
-                        src="/images/Aoko.jpg"
+                        src="/placeholder.svg?height=160&width=160&text=Aoko+Pauline"
                         alt="Aoko Pauline"
                         className="w-full h-full object-cover rounded-full"
                     />
@@ -311,7 +319,7 @@ const About: React.FC = () => {
                 <div className="relative mb-6">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-emerald-100 to-blue-100 p-1">
                     <img
-                        src="/images/Joseph.png"
+                        src="/placeholder.svg?height=160&width=160&text=Joseph+Onyango"
                         alt="Joseph Onyango"
                         className="w-full h-full object-cover rounded-full"
                     />
@@ -358,7 +366,7 @@ const About: React.FC = () => {
                 <div className="relative mb-6">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-emerald-100 p-1">
                     <img
-                        src="/images/Amisi.jpg"
+                        src="/placeholder.svg?height=160&width=160&text=Amisi+Pascal"
                         alt="Amisi Pascal"
                         className="w-full h-full object-cover rounded-full"
                     />

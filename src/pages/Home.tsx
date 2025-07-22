@@ -45,23 +45,63 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Hero Section - Alternating Background */}
+        {/* Hero Section - Enhanced with Mission Statement */}
         <section className="bg-alternating-2 section-padding">
           <div className="section-container">
-            <div className="text-center max-w-4xl mx-auto space-y-6 lg:space-y-8">
-              <h1 className="heading-xl">
-              <span className="gradient-text">
-                AMYRES AGTECH: Powering insightful innovations for sustainable agriculture
-              </span>
-              </h1>
-              <p className="text-lg lg:text-xl text-body">
-                "We don't just deliver AgTech, we build it with you, for you"
-              </p>
+            <div className="text-center max-w-5xl mx-auto space-y-8 lg:space-y-10">
+              <div className="space-y-6">
+                <h1 className="heading-xl">
+                <span className="gradient-text">
+                  AMYRES AGTECH: Powering insightful innovations for sustainable agriculture
+                </span>
+                </h1>
+                <p className="text-xl lg:text-2xl text-body font-medium">
+                  "We don't just deliver AgTech, we build it with you, for you"
+                </p>
+              </div>
+
+              {/* Enhanced Mission Description */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 lg:p-8 shadow-lg border border-white/20">
+                <p className="text-lg lg:text-xl text-slate-700 leading-relaxed mb-6">
+                  We believe the knowledge to transform agriculture already exists. Our mission is to bridge the gap
+                  between research, technology, and real-world agricultural success.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-8">
+                  <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <i className="fas fa-lightbulb text-white text-lg"></i>
+                    </div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Research to Reality</h3>
+                    <p className="text-sm text-slate-600">
+                      Translating scientific research into practical agricultural solutions
+                    </p>
+                  </div>
+                  <div className="text-center p-4 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-2xl">
+                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <i className="fas fa-users text-white text-lg"></i>
+                    </div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Collaborative Approach</h3>
+                    <p className="text-sm text-slate-600">Working with farmers, cooperatives, and value chain actors</p>
+                  </div>
+                  <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <i className="fas fa-chart-line text-white text-lg"></i>
+                    </div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Measurable Impact</h3>
+                    <p className="text-sm text-slate-600">
+                      Turning potential into lasting prosperity for Kenya's agriculture
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/about" className="btn-modern btn-primary">
+                  <i className="fas fa-info-circle mr-2"></i>
                   Learn More About Us
                 </a>
                 <a href="/contact" className="btn-modern btn-primary">
+                  <i className="fas fa-phone mr-2"></i>
                   Get In Touch
                 </a>
               </div>
@@ -69,8 +109,57 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section - Alternating Background */}
+        {/* Value Proposition Section - New */}
         <section className="bg-alternating-1 section-padding">
+          <div className="section-container">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="heading-lg mb-6">
+                <span className="gradient-text">From Knowledge to Action</span>
+              </h2>
+              <p className="text-body max-w-3xl mx-auto text-base lg:text-lg">
+                Based in Nyeri — the heart of Kenya's agricultural ecosystem — we ensure good ideas don't stay stuck in
+                reports or boardrooms.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              <div className="glass-amyres rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-500">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-university text-blue-600 text-2xl"></i>
+                </div>
+                <h3 className="heading-md mb-3">Research Institutions</h3>
+                <p className="text-body text-sm">Partnering with leading agricultural research centers</p>
+              </div>
+
+              <div className="glass-amyres rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-500">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-tractor text-emerald-600 text-2xl"></i>
+                </div>
+                <h3 className="heading-md mb-3">Farmers & Growers</h3>
+                <p className="text-body text-sm">Direct collaboration with agricultural producers</p>
+              </div>
+
+              <div className="glass-amyres rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-500">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-industry text-blue-600 text-2xl"></i>
+                </div>
+                <h3 className="heading-md mb-3">Agribusinesses</h3>
+                <p className="text-body text-sm">Supporting exporters and input suppliers</p>
+              </div>
+
+              <div className="glass-amyres rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-500">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-handshake text-emerald-600 text-2xl"></i>
+                </div>
+                <h3 className="heading-md mb-3">Cooperatives</h3>
+                <p className="text-body text-sm">Empowering farmer cooperatives and associations</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section - Enhanced */}
+        <section className="bg-alternating-2 section-padding">
           <div className="section-container">
             <div className="text-center mb-12 lg:mb-16">
               <h2 className="heading-lg mb-6">
