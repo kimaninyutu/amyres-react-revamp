@@ -72,7 +72,7 @@ const HomeCarousel: React.FC = () => {
                         }`}
                     >
                         <img
-                            src={image.src || "/placeholder.svg"}
+                            src={image.src}
                             alt={image.alt}
                             className="w-full h-full object-cover"
                             loading={index === 0 ? "eager" : "lazy"}
