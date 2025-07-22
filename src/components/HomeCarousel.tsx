@@ -16,25 +16,25 @@ const HomeCarousel: React.FC = () => {
 
     const images: CarouselImage[] = [
         {
-            src: "/images/carousel/agtech-farmer-tablet.jpg",
+            src: "/images/carousel/agtechfarmertablet.jpg",
             alt: "Farmer using digital technology in the field",
             title: "Smart Farming Solutions",
             description: "Empowering farmers with cutting-edge digital tools and real-time data analytics",
         },
         {
-            src: "/images/carousel/aerial-smart-farming.jpg",
+            src: "/images/carousel/aerialsmartfarming.jpg",
             alt: "Aerial view of smart agricultural fields",
             title: "Precision Agriculture",
             description: "Advanced monitoring and management systems for optimized crop production",
         },
         {
-            src: "/images/carousel/farmer-field-tech.jpg",
+            src: "images/carousel/farmerfieldtech.jpg",
             alt: "Farmer with tablet technology in crop field",
             title: "Data-Driven Decisions",
             description: "Transform agricultural practices with intelligent insights and recommendations",
         },
         {
-            src: "/images/carousel/hands-tablet-analytics.jpg",
+            src: "images/carousel/handstabletanalytics.jpg",
             alt: "Agricultural data analytics on mobile device",
             title: "Agricultural Innovation",
             description: "Bridging technology and traditional farming for sustainable growth",

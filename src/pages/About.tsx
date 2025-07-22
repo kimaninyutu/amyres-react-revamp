@@ -264,7 +264,7 @@ const About: React.FC = () => {
                 <div className="relative mb-6">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-emerald-100 p-1">
                     <img
-                        src="public/images/Aoko.jpg"
+                        src="/images/Aoko.jpg"
                         alt="Aoko Pauline"
                         className="w-full h-full object-cover rounded-full"
                     />
@@ -311,7 +311,7 @@ const About: React.FC = () => {
                 <div className="relative mb-6">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-emerald-100 to-blue-100 p-1">
                     <img
-                        src="public/images/Joseph.png"
+                        src="/images/Joseph.png"
                         alt="Joseph Onyango"
                         className="w-full h-full object-cover rounded-full"
                     />
@@ -358,7 +358,7 @@ const About: React.FC = () => {
                 <div className="relative mb-6">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-emerald-100 p-1">
                     <img
-                        src="public/images/Amisi.jpg"
+                        src="/images/Amisi.jpg"
                         alt="Amisi Pascal"
                         className="w-full h-full object-cover rounded-full"
                     />
